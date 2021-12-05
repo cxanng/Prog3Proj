@@ -1,0 +1,63 @@
+[
+    {
+        "typename": "Influence",
+        "name": "Doran Blade",
+        "amount": "10",
+        "img": ":/cards/influence-doranBlade-10.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Doran Ring",
+        "amount": "20",
+        "img": ":/cards/influence-doranRing-20.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Oblivion Orb",
+        "amount": "30",
+        "img": ":/cards/influence-oblivionOrb-30.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Moonstone Renewer",
+        "amount": "40",
+        "img": ":/cards/influence-moonstoneRenewer-40.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Thornmail",
+        "amount": "50",
+        "img": ":/cards/influence-thornmail-50.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Zhonya's Hourglass",
+        "amount": "60",
+        "img": ":/cards/influence-zhonyaHourglass-60.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "B.F Sword",
+        "amount": "70",
+        "img": ":/cards/influence-bfSword-70.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Spirit Visage",
+        "amount": "80",
+        "img": ":/cards/influence-spiritVisage-80.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Immortal Shieldbow",
+        "amount": "90",
+        "img": ":/cards/influence-immortalShieldbow-90.png"
+    },
+    {
+        "typename": "Influence",
+        "name": "Infinity Edge",
+        "amount": "100",
+        "img": ":/cards/influence-infinityEdge-100.png"
+    }
+
+]

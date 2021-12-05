@@ -1,0 +1,111 @@
+\hypertarget{classAction_1_1OwnLocationAction}{}\doxysection{Action\+::Own\+Location\+Action Class Reference}
+\label{classAction_1_1OwnLocationAction}\index{Action::OwnLocationAction@{Action::OwnLocationAction}}
+
+
+action owns a location  
+
+
+
+
+{\ttfamily \#include $<$ownlocationaction.\+h$>$}
+
+Inheritance diagram for Action\+::Own\+Location\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAction_1_1OwnLocationAction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAction_1_1OwnLocationAction_af924f63fa679c9b26145a800f0558013}{Own\+Location\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$ player, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$ target\+Loc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAction_1_1OwnLocationAction}{Own\+Location\+Action}} constructior. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAction_1_1OwnLocationAction_a39a1f5c631d3ad1e58a78feb344693a3}\label{classAction_1_1OwnLocationAction_a39a1f5c631d3ad1e58a78feb344693a3}} 
+virtual \mbox{\hyperlink{classAction_1_1OwnLocationAction_a39a1f5c631d3ad1e58a78feb344693a3}{$\sim$\+Own\+Location\+Action}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAction_1_1OwnLocationAction_a63d967dfba7fcaffcc3487cbda3e0058}{can\+Perform}} () const
+\begin{DoxyCompactList}\small\item\em check if the own location action can be performed \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAction_1_1OwnLocationAction_ae3a5d5ea576f91bd6ddd9e94800b5b99}{perform}} ()
+\begin{DoxyCompactList}\small\item\em performs the suffle and draw action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+action owns a location 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAction_1_1OwnLocationAction_af924f63fa679c9b26145a800f0558013}\label{classAction_1_1OwnLocationAction_af924f63fa679c9b26145a800f0558013}} 
+\index{Action::OwnLocationAction@{Action::OwnLocationAction}!OwnLocationAction@{OwnLocationAction}}
+\index{OwnLocationAction@{OwnLocationAction}!Action::OwnLocationAction@{Action::OwnLocationAction}}
+\doxysubsubsection{\texorpdfstring{OwnLocationAction()}{OwnLocationAction()}}
+{\footnotesize\ttfamily Action\+::\+Own\+Location\+Action\+::\+Own\+Location\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$}]{player,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$}]{target\+Loc }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAction_1_1OwnLocationAction}{Own\+Location\+Action}} constructior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player,share} & pointer to current player \\
+\hline
+{\em target\+Loc,share} & pointer to the target location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Own location action crated for the player 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAction_1_1OwnLocationAction_a63d967dfba7fcaffcc3487cbda3e0058}\label{classAction_1_1OwnLocationAction_a63d967dfba7fcaffcc3487cbda3e0058}} 
+\index{Action::OwnLocationAction@{Action::OwnLocationAction}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Action::OwnLocationAction@{Action::OwnLocationAction}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily bool Action\+::\+Own\+Location\+Action\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if the own location action can be performed 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true if the player has any agent at location and the influence point of the player is higher than the needed one. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+tell the player if the action can be done 
+
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{Interface\+::\+Action\+Interface}}.
+
+\mbox{\Hypertarget{classAction_1_1OwnLocationAction_ae3a5d5ea576f91bd6ddd9e94800b5b99}\label{classAction_1_1OwnLocationAction_ae3a5d5ea576f91bd6ddd9e94800b5b99}} 
+\index{Action::OwnLocationAction@{Action::OwnLocationAction}!perform@{perform}}
+\index{perform@{perform}!Action::OwnLocationAction@{Action::OwnLocationAction}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Action\+::\+Own\+Location\+Action\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+performs the suffle and draw action 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the owner of conciler is set to the current player. 
+
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{Interface\+::\+Action\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ownlocationaction_8h}{ownlocationaction.\+h}}\item 
+ownlocationaction.\+cpp\end{DoxyCompactItemize}

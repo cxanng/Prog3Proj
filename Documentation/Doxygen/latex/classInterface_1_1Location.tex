@@ -1,0 +1,521 @@
+\hypertarget{classInterface_1_1Location}{}\doxysection{Interface\+::Location Class Reference}
+\label{classInterface_1_1Location}\index{Interface::Location@{Interface::Location}}
+
+
+\mbox{\hyperlink{classInterface_1_1Location}{Location}} represents an area on the gameboard with related cards and tokens.  
+
+
+
+
+{\ttfamily \#include $<$location.\+h$>$}
+
+Inheritance diagram for Interface\+::Location\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Location}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInterface_1_1Location_adf43262966e5f43f6a942b1dbdb1f181}{agents\+Changed}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ location) const
+\begin{DoxyCompactList}\small\item\em signal is emitted, when agents have state changes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Location_a49c3b0f40f2584761ede53e656339a11}{influence\+Changed}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ location) const
+\begin{DoxyCompactList}\small\item\em signal is emitted, when player\textquotesingle{}s influence changes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Location_ae14c2bb580b1aab4085cb82f51852e6b}{deck\+Changed}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ location) const
+\begin{DoxyCompactList}\small\item\em signal is emitten when location\textquotesingle{}s deck\textquotesingle{}s state changes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Location_a8f3f9d6bccd1dab99b97dca425fc5516}{discards\+Changed}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ location) const
+\begin{DoxyCompactList}\small\item\em signal is emitted, when location\textquotesingle{}s discard deck\textquotesingle{}s state changes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Location_a9390f314fc3ea46cf3eb2486b99b4770}{Location}} (unsigned short \mbox{\hyperlink{classInterface_1_1Location_aa04600b42ea1565c45ead4487a182472}{id}}, const QString \&\mbox{\hyperlink{classInterface_1_1Location_aaf486b5342cec4723b481d325ad49dc6}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Location_a75865e27d05536fa5cdbc10ddde8cc7b}\label{classInterface_1_1Location_a75865e27d05536fa5cdbc10ddde8cc7b}} 
+virtual \mbox{\hyperlink{classInterface_1_1Location_a75865e27d05536fa5cdbc10ddde8cc7b}{$\sim$\+Location}} ()=default
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Location_a4444c6e6220fe59651e8c4bd77b10493}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em does after-\/constructor initialization \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classInterface_1_1Location_aa04600b42ea1565c45ead4487a182472}{id}} () const
+\begin{DoxyCompactList}\small\item\em getter for id \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1Location_aaf486b5342cec4723b481d325ad49dc6}{name}} () const
+\begin{DoxyCompactList}\small\item\em getter for name \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Location_a37308820d7e5fefe3351d6b12b5275a1}{deck}} () const
+\begin{DoxyCompactList}\small\item\em getter for the location\textquotesingle{}s deck \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Location_a5cac082661235e1ea11f8cc5fc9eb1d7}{deck}} ()
+\begin{DoxyCompactList}\small\item\em getter for the location\textquotesingle{}s deck \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Location_a0e1e752df73b167e3fef6c21da8dc2df}{discards}} () const
+\begin{DoxyCompactList}\small\item\em getter for the location\textquotesingle{}s discard deck \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Location_a62748728d07401dbeb91e6ed9dd7791b}{discards}} ()
+\begin{DoxyCompactList}\small\item\em getter for the location\textquotesingle{}s discard deck \end{DoxyCompactList}\item 
+std\+::set$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Location_ad696c6186670247042ad50f67cb5d224}{agents}} () const
+\begin{DoxyCompactList}\small\item\em getter for the played agents \end{DoxyCompactList}\item 
+std\+::set$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Location_a6f04f80bf07910794454445708c03008}{agents}} ()
+\begin{DoxyCompactList}\small\item\em getter for the played agents \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1Location_a97614cbc5519f915dae6aefd288da45b}{can\+Send\+Agent}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ owner) const
+\begin{DoxyCompactList}\small\item\em can an agent be played onto the location \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Location_a2fd9ea16047950f36fb404637c58c392}{send\+Agent}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ agent)
+\begin{DoxyCompactList}\small\item\em send an agent onto the location \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Location_af07ca3506b59de500cb39ca9da4b81e3}{remove\+Agent}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ agent)
+\begin{DoxyCompactList}\small\item\em removes agent from location \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Location_af7963423aa51f22f909d58e685ce49d4}{councilor}} () const
+\begin{DoxyCompactList}\small\item\em getter for location\textquotesingle{}s councilor \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Location_a6684ea3a81058d49d546f3afd3cd41f7}{councilor}} ()
+\begin{DoxyCompactList}\small\item\em getter for location\textquotesingle{}s councilor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Location_aa3033c2465b62db4b466623b960864ad}{set\+Councilor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Location_af7963423aa51f22f909d58e685ce49d4}{councilor}})
+\begin{DoxyCompactList}\small\item\em setter for councilor \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classInterface_1_1Location_afb6bdab3a4c634691ede0c0df3621106}{influence}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player) const
+\begin{DoxyCompactList}\small\item\em gets a players influence over location\textquotesingle{}s councilor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Location_a2a70f7c4a50fd39bf7e763f906d2f4b9}{set\+Influence}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player, unsigned short \mbox{\hyperlink{classInterface_1_1Location_afb6bdab3a4c634691ede0c0df3621106}{influence}})
+\begin{DoxyCompactList}\small\item\em set player\textquotesingle{}s influence over the location\textquotesingle{}s councilor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Location}{Location}} represents an area on the gameboard with related cards and tokens. 
+
+All class methods have the precondition that the object is owned by shared\+\_\+ptrs.
+
+All class methods, except \mbox{\hyperlink{classInterface_1_1Location_a4444c6e6220fe59651e8c4bd77b10493}{initialize()}}, have the precondition that \mbox{\hyperlink{classInterface_1_1Location_a4444c6e6220fe59651e8c4bd77b10493}{initialize()}}-\/method has been called.
+
+If a method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} may always leak. (Out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Location_a9390f314fc3ea46cf3eb2486b99b4770}\label{classInterface_1_1Location_a9390f314fc3ea46cf3eb2486b99b4770}} 
+\index{Interface::Location@{Interface::Location}!Location@{Location}}
+\index{Location@{Location}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{Location()}{Location()}}
+{\footnotesize\ttfamily Interface\+::\+Location\+::\+Location (\begin{DoxyParamCaption}\item[{unsigned short}]{id,  }\item[{const QString \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+\begin{DoxyPrecond}{Precondition}
+id is unique among location ids 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & for the location \\
+\hline
+{\em name} & for the location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+location has given id and name, empty game and discard decks, and no agents, councilor or influence 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Location_a6f04f80bf07910794454445708c03008}\label{classInterface_1_1Location_a6f04f80bf07910794454445708c03008}} 
+\index{Interface::Location@{Interface::Location}!agents@{agents}}
+\index{agents@{agents}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{agents()}{agents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily set$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ $>$ Interface\+::\+Location\+::agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for the played agents 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+set of shared\+\_\+ptrs to the agents 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_ad696c6186670247042ad50f67cb5d224}\label{classInterface_1_1Location_ad696c6186670247042ad50f67cb5d224}} 
+\index{Interface::Location@{Interface::Location}!agents@{agents}}
+\index{agents@{agents}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{agents()}{agents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily set$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ $>$ Interface\+::\+Location\+::agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for the played agents 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+set of shared\+\_\+ptrs to the agents 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_adf43262966e5f43f6a942b1dbdb1f181}\label{classInterface_1_1Location_adf43262966e5f43f6a942b1dbdb1f181}} 
+\index{Interface::Location@{Interface::Location}!agentsChanged@{agentsChanged}}
+\index{agentsChanged@{agentsChanged}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{agentsChanged}{agentsChanged}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::agents\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal is emitted, when agents have state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & where change happened \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_1_1Location_a97614cbc5519f915dae6aefd288da45b}\label{classInterface_1_1Location_a97614cbc5519f915dae6aefd288da45b}} 
+\index{Interface::Location@{Interface::Location}!canSendAgent@{canSendAgent}}
+\index{canSendAgent@{canSendAgent}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{canSendAgent()}{canSendAgent()}}
+{\footnotesize\ttfamily bool Interface\+::\+Location\+::can\+Send\+Agent (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{owner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+can an agent be played onto the location 
+
+\begin{DoxyPrecond}{Precondition}
+owner != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & of the agent to be played \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, is owner doesn\textquotesingle{}t already have agent on location 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a6684ea3a81058d49d546f3afd3cd41f7}\label{classInterface_1_1Location_a6684ea3a81058d49d546f3afd3cd41f7}} 
+\index{Interface::Location@{Interface::Location}!councilor@{councilor}}
+\index{councilor@{councilor}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{councilor()}{councilor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ Interface\+::\+Location\+::councilor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for location\textquotesingle{}s councilor 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+councilor of this area 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_af7963423aa51f22f909d58e685ce49d4}\label{classInterface_1_1Location_af7963423aa51f22f909d58e685ce49d4}} 
+\index{Interface::Location@{Interface::Location}!councilor@{councilor}}
+\index{councilor@{councilor}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{councilor()}{councilor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ Interface\+::\+Location\+::councilor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for location\textquotesingle{}s councilor 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+councilor of this area 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a5cac082661235e1ea11f8cc5fc9eb1d7}\label{classInterface_1_1Location_a5cac082661235e1ea11f8cc5fc9eb1d7}} 
+\index{Interface::Location@{Interface::Location}!deck@{deck}}
+\index{deck@{deck}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{deck()}{deck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Location\+::deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for the location\textquotesingle{}s deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the deck 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a37308820d7e5fefe3351d6b12b5275a1}\label{classInterface_1_1Location_a37308820d7e5fefe3351d6b12b5275a1}} 
+\index{Interface::Location@{Interface::Location}!deck@{deck}}
+\index{deck@{deck}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{deck()}{deck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Location\+::deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for the location\textquotesingle{}s deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the deck 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_ae14c2bb580b1aab4085cb82f51852e6b}\label{classInterface_1_1Location_ae14c2bb580b1aab4085cb82f51852e6b}} 
+\index{Interface::Location@{Interface::Location}!deckChanged@{deckChanged}}
+\index{deckChanged@{deckChanged}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{deckChanged}{deckChanged}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::deck\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal is emitten when location\textquotesingle{}s deck\textquotesingle{}s state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & where change happened \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_1_1Location_a62748728d07401dbeb91e6ed9dd7791b}\label{classInterface_1_1Location_a62748728d07401dbeb91e6ed9dd7791b}} 
+\index{Interface::Location@{Interface::Location}!discards@{discards}}
+\index{discards@{discards}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{discards()}{discards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Location\+::discards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for the location\textquotesingle{}s discard deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the discard deck 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a0e1e752df73b167e3fef6c21da8dc2df}\label{classInterface_1_1Location_a0e1e752df73b167e3fef6c21da8dc2df}} 
+\index{Interface::Location@{Interface::Location}!discards@{discards}}
+\index{discards@{discards}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{discards()}{discards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Location\+::discards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for the location\textquotesingle{}s discard deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the discard deck 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a8f3f9d6bccd1dab99b97dca425fc5516}\label{classInterface_1_1Location_a8f3f9d6bccd1dab99b97dca425fc5516}} 
+\index{Interface::Location@{Interface::Location}!discardsChanged@{discardsChanged}}
+\index{discardsChanged@{discardsChanged}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{discardsChanged}{discardsChanged}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::discards\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal is emitted, when location\textquotesingle{}s discard deck\textquotesingle{}s state changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & where change happened \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_1_1Location_aa04600b42ea1565c45ead4487a182472}\label{classInterface_1_1Location_aa04600b42ea1565c45ead4487a182472}} 
+\index{Interface::Location@{Interface::Location}!id@{id}}
+\index{id@{id}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily unsigned short Interface\+::\+Location\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for id 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+locationd id 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_afb6bdab3a4c634691ede0c0df3621106}\label{classInterface_1_1Location_afb6bdab3a4c634691ede0c0df3621106}} 
+\index{Interface::Location@{Interface::Location}!influence@{influence}}
+\index{influence@{influence}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{influence()}{influence()}}
+{\footnotesize\ttfamily unsigned short Interface\+::\+Location\+::influence (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player }\end{DoxyParamCaption}) const}
+
+
+
+gets a players influence over location\textquotesingle{}s councilor 
+
+\begin{DoxyPrecond}{Precondition}
+player != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s influence 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a49c3b0f40f2584761ede53e656339a11}\label{classInterface_1_1Location_a49c3b0f40f2584761ede53e656339a11}} 
+\index{Interface::Location@{Interface::Location}!influenceChanged@{influenceChanged}}
+\index{influenceChanged@{influenceChanged}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{influenceChanged}{influenceChanged}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::influence\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal is emitted, when player\textquotesingle{}s influence changes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & where change happened \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_1_1Location_a4444c6e6220fe59651e8c4bd77b10493}\label{classInterface_1_1Location_a4444c6e6220fe59651e8c4bd77b10493}} 
+\index{Interface::Location@{Interface::Location}!initialize@{initialize}}
+\index{initialize@{initialize}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+does after-\/constructor initialization 
+
+\begin{DoxyPrecond}{Precondition}
+this method has not been called previously 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+other methods can be called on this object 
+
+exception guarantee\+: basic 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_aaf486b5342cec4723b481d325ad49dc6}\label{classInterface_1_1Location_aaf486b5342cec4723b481d325ad49dc6}} 
+\index{Interface::Location@{Interface::Location}!name@{name}}
+\index{name@{name}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily QString Interface\+::\+Location\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter for name 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+name of the location 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_af07ca3506b59de500cb39ca9da4b81e3}\label{classInterface_1_1Location_af07ca3506b59de500cb39ca9da4b81e3}} 
+\index{Interface::Location@{Interface::Location}!removeAgent@{removeAgent}}
+\index{removeAgent@{removeAgent}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{removeAgent()}{removeAgent()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::remove\+Agent (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+removes agent from location 
+
+\begin{DoxyPrecond}{Precondition}
+agent is in this location 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+agent is not on location and knows about it. Signal agents\+Changed has been emitted. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a2fd9ea16047950f36fb404637c58c392}\label{classInterface_1_1Location_a2fd9ea16047950f36fb404637c58c392}} 
+\index{Interface::Location@{Interface::Location}!sendAgent@{sendAgent}}
+\index{sendAgent@{sendAgent}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{sendAgent()}{sendAgent()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::send\+Agent (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+send an agent onto the location 
+
+\begin{DoxyPrecond}{Precondition}
+agent != nullptr ; agent can be played ; agent is not already on board, in deck or anyones hand 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & to play \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+agent is on location and knows about it. Signal agents\+Changed has been emitted. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_aa3033c2465b62db4b466623b960864ad}\label{classInterface_1_1Location_aa3033c2465b62db4b466623b960864ad}} 
+\index{Interface::Location@{Interface::Location}!setCouncilor@{setCouncilor}}
+\index{setCouncilor@{setCouncilor}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{setCouncilor()}{setCouncilor()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::set\+Councilor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$}]{councilor }\end{DoxyParamCaption})}
+
+
+
+setter for councilor 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em councilor} & for the location, empty if no councilor is wanted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+councilor has been set to this location 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Location_a2a70f7c4a50fd39bf7e763f906d2f4b9}\label{classInterface_1_1Location_a2a70f7c4a50fd39bf7e763f906d2f4b9}} 
+\index{Interface::Location@{Interface::Location}!setInfluence@{setInfluence}}
+\index{setInfluence@{setInfluence}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{setInfluence()}{setInfluence()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::set\+Influence (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player,  }\item[{unsigned short}]{influence }\end{DoxyParamCaption})}
+
+
+
+set player\textquotesingle{}s influence over the location\textquotesingle{}s councilor 
+
+\begin{DoxyPrecond}{Precondition}
+player != nulltpr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & whose influence to change \\
+\hline
+{\em influence} & new amount \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+influence has been set to the new value. Signal influence\+Changed has been emitted. 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{location_8h}{location.\+h}}\item 
+mocs/moc\+\_\+location.\+cpp\item 
+location.\+cpp\end{DoxyCompactItemize}

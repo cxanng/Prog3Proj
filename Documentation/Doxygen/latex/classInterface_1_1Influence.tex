@@ -1,0 +1,239 @@
+\hypertarget{classInterface_1_1Influence}{}\doxysection{Interface\+::Influence Class Reference}
+\label{classInterface_1_1Influence}\index{Interface::Influence@{Interface::Influence}}
+
+
+\mbox{\hyperlink{classInterface_1_1Influence}{Influence}} implements the influence cards. \mbox{\hyperlink{classInterface_1_1Influence}{Influence}} inherits from \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}.  
+
+
+
+
+{\ttfamily \#include $<$influence.\+h$>$}
+
+Inheritance diagram for Interface\+::Influence\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Influence}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Influence_a6e49705e4502d3e592e3f36ea1d2346a}{Influence}} (const QString \&\mbox{\hyperlink{classInterface_1_1Influence_a686bed5ee88f1bc740b7210c76509838}{name}}, std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1Influence_a93075596fd9fba7d56067ebdfd947f3c}{location}}, unsigned short \mbox{\hyperlink{classInterface_1_1Influence_a424ad6e18a785285a07050a6c7886637}{amount}})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Influence_a5558dec29c089fb89360e03ae9d92e18}\label{classInterface_1_1Influence_a5558dec29c089fb89360e03ae9d92e18}} 
+virtual \mbox{\hyperlink{classInterface_1_1Influence_a5558dec29c089fb89360e03ae9d92e18}{$\sim$\+Influence}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classInterface_1_1Influence_a0eb784730868a2a4b34a73b7903da2ab}{type\+Name}} () const
+\begin{DoxyCompactList}\small\item\em returns the card\textquotesingle{}s type \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1Influence_a686bed5ee88f1bc740b7210c76509838}{name}} () const
+\begin{DoxyCompactList}\small\item\em returns the card\textquotesingle{}s name \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1Influence_a737b0b11fea73b73fc43fee9bbe05bf1}{title}} () const
+\begin{DoxyCompactList}\small\item\em returns the card\textquotesingle{}s title \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1Influence_a93075596fd9fba7d56067ebdfd947f3c}{location}} () const
+\begin{DoxyCompactList}\small\item\em tells which location card is related to \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Influence_a0513e3835ca1b7575310020fa8f906fb}{owner}} () const
+\begin{DoxyCompactList}\small\item\em who owns the card \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Influence_a7ea363b8d240de8c82d870a527436375}{set\+Owner}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Influence_a0513e3835ca1b7575310020fa8f906fb}{owner}})
+\begin{DoxyCompactList}\small\item\em sets an owner to the card \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classInterface_1_1Influence_a424ad6e18a785285a07050a6c7886637}{amount}} () const
+\begin{DoxyCompactList}\small\item\em how much influence does the card have \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Influence}{Influence}} implements the influence cards. \mbox{\hyperlink{classInterface_1_1Influence}{Influence}} inherits from \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}. 
+
+If class method is not nothrow, it can always leak \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{}. (Out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Influence_a6e49705e4502d3e592e3f36ea1d2346a}\label{classInterface_1_1Influence_a6e49705e4502d3e592e3f36ea1d2346a}} 
+\index{Interface::Influence@{Interface::Influence}!Influence@{Influence}}
+\index{Influence@{Influence}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{Influence()}{Influence()}}
+{\footnotesize\ttfamily Interface\+::\+Influence\+::\+Influence (\begin{DoxyParamCaption}\item[{const QString \&}]{name,  }\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location,  }\item[{unsigned short}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+constructor 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & card\textquotesingle{}s name \\
+\hline
+{\em location} & the card belongs to \\
+\hline
+{\em amount} & of the influence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classInterface_1_1Influence}{Influence}} card has given name, location and amount, empty title, and is unowned 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Influence_a424ad6e18a785285a07050a6c7886637}\label{classInterface_1_1Influence_a424ad6e18a785285a07050a6c7886637}} 
+\index{Interface::Influence@{Interface::Influence}!amount@{amount}}
+\index{amount@{amount}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{amount()}{amount()}}
+{\footnotesize\ttfamily unsigned short Interface\+::\+Influence\+::amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+how much influence does the card have 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card\textquotesingle{}s influence 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Influence_a93075596fd9fba7d56067ebdfd947f3c}\label{classInterface_1_1Influence_a93075596fd9fba7d56067ebdfd947f3c}} 
+\index{Interface::Influence@{Interface::Influence}!location@{location}}
+\index{location@{location}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ Interface\+::\+Influence\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+tells which location card is related to 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the location 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_abf1e60d7f43adacf09c2717d34fade23}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Influence_a686bed5ee88f1bc740b7210c76509838}\label{classInterface_1_1Influence_a686bed5ee88f1bc740b7210c76509838}} 
+\index{Interface::Influence@{Interface::Influence}!name@{name}}
+\index{name@{name}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily QString Interface\+::\+Influence\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the card\textquotesingle{}s name 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card name as a string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aeb0c3aeb4fa2311d46eb9e9f00c46d76}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Influence_a0513e3835ca1b7575310020fa8f906fb}\label{classInterface_1_1Influence_a0513e3835ca1b7575310020fa8f906fb}} 
+\index{Interface::Influence@{Interface::Influence}!owner@{owner}}
+\index{owner@{owner}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{owner()}{owner()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Influence\+::owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+who owns the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the owner, or empty if unowned 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aa1354642e1d7a65470ab531f3c245af7}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Influence_a7ea363b8d240de8c82d870a527436375}\label{classInterface_1_1Influence_a7ea363b8d240de8c82d870a527436375}} 
+\index{Interface::Influence@{Interface::Influence}!setOwner@{setOwner}}
+\index{setOwner@{setOwner}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{setOwner()}{setOwner()}}
+{\footnotesize\ttfamily void Interface\+::\+Influence\+::set\+Owner (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets an owner to the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & weak\+\_\+ptr to the cards\textquotesingle{} new owner, or empty if removed from possession \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+card has a new owner 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a4ea5b682171c6aa6267b34a74083a420}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Influence_a737b0b11fea73b73fc43fee9bbe05bf1}\label{classInterface_1_1Influence_a737b0b11fea73b73fc43fee9bbe05bf1}} 
+\index{Interface::Influence@{Interface::Influence}!title@{title}}
+\index{title@{title}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily QString Interface\+::\+Influence\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the card\textquotesingle{}s title 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card title as a string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a6eb68e14723995efab8a3020357fa033}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Influence_a0eb784730868a2a4b34a73b7903da2ab}\label{classInterface_1_1Influence_a0eb784730868a2a4b34a73b7903da2ab}} 
+\index{Interface::Influence@{Interface::Influence}!typeName@{typeName}}
+\index{typeName@{typeName}!Interface::Influence@{Interface::Influence}}
+\doxysubsubsection{\texorpdfstring{typeName()}{typeName()}}
+{\footnotesize\ttfamily QString Interface\+::\+Influence\+::type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the card\textquotesingle{}s type 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card type as a string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a9dd5a29dc868c20a87365123819159ca}{Interface\+::\+Card\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{influence_8h}{influence.\+h}}\item 
+influence.\+cpp\end{DoxyCompactItemize}

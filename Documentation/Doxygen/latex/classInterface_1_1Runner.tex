@@ -1,0 +1,159 @@
+\hypertarget{classInterface_1_1Runner}{}\doxysection{Interface\+::Runner Class Reference}
+\label{classInterface_1_1Runner}\index{Interface::Runner@{Interface::Runner}}
+
+
+\mbox{\hyperlink{classInterface_1_1Runner}{Runner}} asks players\textquotesingle{} for actions and executes them. (The actions, not the players \+:D.)  
+
+
+
+
+{\ttfamily \#include $<$runner.\+h$>$}
+
+Inheritance diagram for Interface\+::Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Runner}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1Runner_aa4e37a5459cc573632cc8e8a01f4a5fe}\label{classInterface_1_1Runner_aa4e37a5459cc573632cc8e8a01f4a5fe}} 
+void {\bfseries action\+Performed} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$ action) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Runner_acf96fb81d962976d78d5e54c6d974a14}{Runner}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Game}} $>$ game)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Runner_a5f0d97fc5bcbd431e905d431c6d7d5b9}\label{classInterface_1_1Runner_a5f0d97fc5bcbd431e905d431c6d7d5b9}} 
+virtual \mbox{\hyperlink{classInterface_1_1Runner_a5f0d97fc5bcbd431e905d431c6d7d5b9}{$\sim$\+Runner}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Runner_ac0ef8e39ec9df38a992e025ebca8f2c1}{player\+Control}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player) const
+\begin{DoxyCompactList}\small\item\em return the control object for the player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Runner_a5aab4f088b0e51fd2ec25ba8e01536b1}{set\+Player\+Control}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$ control)
+\begin{DoxyCompactList}\small\item\em set a control object for the player \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}{run}} ()
+\begin{DoxyCompactList}\small\item\em run asks for actions from the player in turn\textquotesingle{}s control object and executes the given actions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Runner}{Runner}} asks players\textquotesingle{} for actions and executes them. (The actions, not the players \+:D.) 
+
+Usage\+:
+\begin{DoxyEnumerate}
+\item Set control objects for the players.
+\item Call \mbox{\hyperlink{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}{run()}}, which starts communicating with control objects to ask for actions which are then executed. For each action executed, action\+Performed-\/signal is emitted.
+\item If \mbox{\hyperlink{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}{run()}} returns a pointer to a control object, the player managed by the object is in turn but the object couldn\textquotesingle{}t give the next move. Fix the state of the object or exchange it to a new one, and return to step 2.
+\item If \mbox{\hyperlink{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}{run()}} returns a nullptr, game has ended.
+\end{DoxyEnumerate}
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Runner_acf96fb81d962976d78d5e54c6d974a14}\label{classInterface_1_1Runner_acf96fb81d962976d78d5e54c6d974a14}} 
+\index{Interface::Runner@{Interface::Runner}!Runner@{Runner}}
+\index{Runner@{Runner}!Interface::Runner@{Interface::Runner}}
+\doxysubsubsection{\texorpdfstring{Runner()}{Runner()}}
+{\footnotesize\ttfamily Interface\+::\+Runner\+::\+Runner (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Game}} $>$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+constructor 
+
+\begin{DoxyPrecond}{Precondition}
+game != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+runner has been created and set to watch the static state of the game 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Runner_ac0ef8e39ec9df38a992e025ebca8f2c1}\label{classInterface_1_1Runner_ac0ef8e39ec9df38a992e025ebca8f2c1}} 
+\index{Interface::Runner@{Interface::Runner}!playerControl@{playerControl}}
+\index{playerControl@{playerControl}!Interface::Runner@{Interface::Runner}}
+\doxysubsubsection{\texorpdfstring{playerControl()}{playerControl()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$ Interface\+::\+Runner\+::player\+Control (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player }\end{DoxyParamCaption}) const}
+
+
+
+return the control object for the player 
+
+\begin{DoxyPrecond}{Precondition}
+player != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the control object, or empty if none has been set 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}\label{classInterface_1_1Runner_a6ecbcede8d2ae8487abe26c2d57e9e44}} 
+\index{Interface::Runner@{Interface::Runner}!run@{run}}
+\index{run@{run}!Interface::Runner@{Interface::Runner}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$ Interface\+::\+Runner\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run asks for actions from the player in turn\textquotesingle{}s control object and executes the given actions 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+control object, that couldn\textquotesingle{}t give an action, or nullptr if game has finished 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+For every executed action the action\+Performed signal has been emitted. This object is ready to continue. 
+
+exception guarantee\+: basic 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1ControlException}{Control\+Exception}}} & if producing the action caused an error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1Runner_a5aab4f088b0e51fd2ec25ba8e01536b1}\label{classInterface_1_1Runner_a5aab4f088b0e51fd2ec25ba8e01536b1}} 
+\index{Interface::Runner@{Interface::Runner}!setPlayerControl@{setPlayerControl}}
+\index{setPlayerControl@{setPlayerControl}!Interface::Runner@{Interface::Runner}}
+\doxysubsubsection{\texorpdfstring{setPlayerControl()}{setPlayerControl()}}
+{\footnotesize\ttfamily void Interface\+::\+Runner\+::set\+Player\+Control (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} $>$}]{control }\end{DoxyParamCaption})}
+
+
+
+set a control object for the player 
+
+\begin{DoxyPrecond}{Precondition}
+player != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em control} & object to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+control object has been set for the player 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{runner_8h}{runner.\+h}}\item 
+mocs/moc\+\_\+runner.\+cpp\item 
+runner.\+cpp\end{DoxyCompactItemize}

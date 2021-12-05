@@ -1,0 +1,270 @@
+\hypertarget{classInterface_1_1Player}{}\doxysection{Interface\+::Player Class Reference}
+\label{classInterface_1_1Player}\index{Interface::Player@{Interface::Player}}
+
+
+\mbox{\hyperlink{classInterface_1_1Player}{Player}} represents a player.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+Inheritance diagram for Interface\+::Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Player_adf87ad15212caf16c96a7337e7b3efe7}{Player}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Interface\+::\+Game}} $>$ game, unsigned short \mbox{\hyperlink{classInterface_1_1Player_a46da7573c549831d3e3e0ecea85650cb}{id}}, const QString \&\mbox{\hyperlink{classInterface_1_1Player_afa1c5274bf2741373bbb83931e9f65dc}{name}})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Player_a86d778cd3388c08a8d1db9a0d5023bdc}\label{classInterface_1_1Player_a86d778cd3388c08a8d1db9a0d5023bdc}} 
+virtual \mbox{\hyperlink{classInterface_1_1Player_a86d778cd3388c08a8d1db9a0d5023bdc}{$\sim$\+Player}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classInterface_1_1Player_a46da7573c549831d3e3e0ecea85650cb}{id}} () const
+\begin{DoxyCompactList}\small\item\em getter for the location id \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classInterface_1_1Player_afa1c5274bf2741373bbb83931e9f65dc}{name}} () const
+\begin{DoxyCompactList}\small\item\em name getter \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Councilor}{Interface\+::\+Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Player_a9fda8bafe5bfa1436f45f1180389f1e2}{councilor}} () const
+\begin{DoxyCompactList}\small\item\em returns the councilor card player has / is acting as \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Interface\+::\+Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Player_a4eabce748d286999360db7fa71c00818}{councilor}} ()
+\begin{DoxyCompactList}\small\item\em returns the councilor card player has / is acting as \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Player_a11a09f82e392cfb00fc07c0cee56730f}{set\+Councilor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Interface\+::\+Councilor}} $>$ \mbox{\hyperlink{classInterface_1_1Player_a9fda8bafe5bfa1436f45f1180389f1e2}{councilor}})
+\begin{DoxyCompactList}\small\item\em set councilor card as player\textquotesingle{}s role \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Player_a436930dd0524e97e07d61fd9099f60b2}{cards}} () const
+\begin{DoxyCompactList}\small\item\em return the cards in player\textquotesingle{}s hand \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Player_a2422c911539b88d240ba0245e248daa0}{cards}} ()
+\begin{DoxyCompactList}\small\item\em return the cards in player\textquotesingle{}s hand \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Player_a3d29e421303cccca4411559f64d75c73}{add\+Card}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card)
+\begin{DoxyCompactList}\small\item\em add a card to player\textquotesingle{}s hand \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Player_abfd5d2f21f23281a1ed7807fc7fe024a}{play\+Card}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card)
+\begin{DoxyCompactList}\small\item\em takes a card from player\textquotesingle{}s hand to be played \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Player}{Player}} represents a player. 
+
+Class defines player as a part of game state, not as a player who does actions.
+
+All class methods have the precondition that this object is owned by shared\+\_\+ptr.
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Player_adf87ad15212caf16c96a7337e7b3efe7}\label{classInterface_1_1Player_adf87ad15212caf16c96a7337e7b3efe7}} 
+\index{Interface::Player@{Interface::Player}!Player@{Player}}
+\index{Player@{Player}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Interface\+::\+Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Interface\+::\+Game}} $>$}]{game,  }\item[{unsigned short}]{id,  }\item[{const QString \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+constructor 
+
+\begin{DoxyPrecond}{Precondition}
+game.\+lock() 1= nulltpr; id is not used already for another players id 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & object \\
+\hline
+{\em name} & of the player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+player has given id and name, and no councilor or cards in hand 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Player_a3d29e421303cccca4411559f64d75c73}\label{classInterface_1_1Player_a3d29e421303cccca4411559f64d75c73}} 
+\index{Interface::Player@{Interface::Player}!addCard@{addCard}}
+\index{addCard@{addCard}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{addCard()}{addCard()}}
+{\footnotesize\ttfamily void Interface\+::\+Player\+::add\+Card (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$}]{card }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+add a card to player\textquotesingle{}s hand 
+
+\begin{DoxyPrecond}{Precondition}
+card != nullptr; card is not on board, in any deck or in another player\textquotesingle{}s hand 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em card} & to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+card has been added to hand 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a2422c911539b88d240ba0245e248daa0}\label{classInterface_1_1Player_a2422c911539b88d240ba0245e248daa0}} 
+\index{Interface::Player@{Interface::Player}!cards@{cards}}
+\index{cards@{cards}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{cards()}{cards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ $>$ Interface\+::\+Player\+::cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+return the cards in player\textquotesingle{}s hand 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s handcards 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a436930dd0524e97e07d61fd9099f60b2}\label{classInterface_1_1Player_a436930dd0524e97e07d61fd9099f60b2}} 
+\index{Interface::Player@{Interface::Player}!cards@{cards}}
+\index{cards@{cards}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{cards()}{cards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ $>$ Interface\+::\+Player\+::cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+return the cards in player\textquotesingle{}s hand 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s handcards 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a4eabce748d286999360db7fa71c00818}\label{classInterface_1_1Player_a4eabce748d286999360db7fa71c00818}} 
+\index{Interface::Player@{Interface::Player}!councilor@{councilor}}
+\index{councilor@{councilor}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{councilor()}{councilor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ Interface\+::\+Player\+::councilor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the councilor card player has / is acting as 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s councilor card 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a9fda8bafe5bfa1436f45f1180389f1e2}\label{classInterface_1_1Player_a9fda8bafe5bfa1436f45f1180389f1e2}} 
+\index{Interface::Player@{Interface::Player}!councilor@{councilor}}
+\index{councilor@{councilor}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{councilor()}{councilor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} $>$ Interface\+::\+Player\+::councilor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the councilor card player has / is acting as 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s councilor card 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a46da7573c549831d3e3e0ecea85650cb}\label{classInterface_1_1Player_a46da7573c549831d3e3e0ecea85650cb}} 
+\index{Interface::Player@{Interface::Player}!id@{id}}
+\index{id@{id}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily unsigned short Interface\+::\+Player\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+getter for the location id 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+location id 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_afa1c5274bf2741373bbb83931e9f65dc}\label{classInterface_1_1Player_afa1c5274bf2741373bbb83931e9f65dc}} 
+\index{Interface::Player@{Interface::Player}!name@{name}}
+\index{name@{name}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily QString Interface\+::\+Player\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+name getter 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s name 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_abfd5d2f21f23281a1ed7807fc7fe024a}\label{classInterface_1_1Player_abfd5d2f21f23281a1ed7807fc7fe024a}} 
+\index{Interface::Player@{Interface::Player}!playCard@{playCard}}
+\index{playCard@{playCard}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{playCard()}{playCard()}}
+{\footnotesize\ttfamily void Interface\+::\+Player\+::play\+Card (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$}]{card }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+takes a card from player\textquotesingle{}s hand to be played 
+
+\begin{DoxyPrecond}{Precondition}
+card is in player\textquotesingle{}s hand 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em card} & to play \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+card has been removed from hand 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Player_a11a09f82e392cfb00fc07c0cee56730f}\label{classInterface_1_1Player_a11a09f82e392cfb00fc07c0cee56730f}} 
+\index{Interface::Player@{Interface::Player}!setCouncilor@{setCouncilor}}
+\index{setCouncilor@{setCouncilor}!Interface::Player@{Interface::Player}}
+\doxysubsubsection{\texorpdfstring{setCouncilor()}{setCouncilor()}}
+{\footnotesize\ttfamily void Interface\+::\+Player\+::set\+Councilor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Councilor}{Interface\+::\+Councilor}} $>$}]{councilor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set councilor card as player\textquotesingle{}s role 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em councilor} & to act as \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+councilor has been set as player\textquotesingle{}s role 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+player.\+cpp\end{DoxyCompactItemize}

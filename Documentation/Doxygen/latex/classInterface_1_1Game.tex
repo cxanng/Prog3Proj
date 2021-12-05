@@ -1,0 +1,447 @@
+\hypertarget{classInterface_1_1Game}{}\doxysection{Interface\+::Game Class Reference}
+\label{classInterface_1_1Game}\index{Interface::Game@{Interface::Game}}
+
+
+\mbox{\hyperlink{classInterface_1_1Game}{Game}} saves the static state.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+Inheritance diagram for Interface\+::Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Game}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInterface_1_1Game_ad0717ae9901b5c1f0978879a55bd5847}{player\+Changed}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ acting\+Player) const
+\begin{DoxyCompactList}\small\item\em this signal is emitted when the state of active player is changed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Game_a39f2a9b4710ca9c1fe4e7ad3748c5471}\label{classInterface_1_1Game_a39f2a9b4710ca9c1fe4e7ad3748c5471}} 
+void \mbox{\hyperlink{classInterface_1_1Game_a39f2a9b4710ca9c1fe4e7ad3748c5471}{councilor\+Deck\+Changed}} () const
+\begin{DoxyCompactList}\small\item\em this signal is emitted when state of the counsilordeck is changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Game_afb3f5692a476712555396b2e7397aa36}{Game}} ()
+\begin{DoxyCompactList}\small\item\em default \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Game_a06ce571238a44baab60e6c7e8be758de}\label{classInterface_1_1Game_a06ce571238a44baab60e6c7e8be758de}} 
+virtual \mbox{\hyperlink{classInterface_1_1Game_a06ce571238a44baab60e6c7e8be758de}{$\sim$\+Game}} ()=default
+\begin{DoxyCompactList}\small\item\em default \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Game_abdee78a5912a9362828f651d8b2c4205}{players}} () const
+\begin{DoxyCompactList}\small\item\em returns all players \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Game_a6aa9395c5b3167cee45e20a2da733428}{players}} ()
+\begin{DoxyCompactList}\small\item\em returns all players \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Game_a7ac5e19eff5bd09b01e79b8daa8d2ec6}{locations}} () const
+\begin{DoxyCompactList}\small\item\em returns all locations in gameboard \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ $>$ \mbox{\hyperlink{classInterface_1_1Game_aad4a8be49c33c1e2b43804e8b3db49eb}{locations}} ()
+\begin{DoxyCompactList}\small\item\em returns all locations in gameboard \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Game_a54ff79f33ca39118f3aa74bb34a7b5a9}{councilor\+Deck}} () const
+\begin{DoxyCompactList}\small\item\em returns the counsilordeck \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1Game_a72cef12f1da9bcd3b3c8cffaad5910e1}{councilor\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em returns the counsilordeck \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInterface_1_1Game_a3e3d3f093339cc404f510bd5c51da11e}{active}} () const
+\begin{DoxyCompactList}\small\item\em returns the info if the game is running or not \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Game_afa2f4f6871cbc8bedca6e03f92b95445}{set\+Active}} (bool \mbox{\hyperlink{classInterface_1_1Game_a3e3d3f093339cc404f510bd5c51da11e}{active}})
+\begin{DoxyCompactList}\small\item\em starts or pauses the game \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Game_adbbe6eb3927fd7e89c85096040026202}{current\+Player}} () const
+\begin{DoxyCompactList}\small\item\em tells who is in turn \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$ \mbox{\hyperlink{classInterface_1_1Game_a7cee2875de3d3a5d99c980e3287b6886}{current\+Player}} ()
+\begin{DoxyCompactList}\small\item\em tells who is in turn \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Game_a93b1e2cfa53caf554d6535c2dc3870ab}{add\+Location}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ location)
+\begin{DoxyCompactList}\small\item\em adds a new location to the game \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Game_ada56fa4c0da3e2db8887837fa1e8623e}{add\+Player}} (const QString \&name)
+\begin{DoxyCompactList}\small\item\em adds a player to the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Game_af0eac90e9824b019b2cb647b0eeb79a2}{add\+Player}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ player)
+\begin{DoxyCompactList}\small\item\em add a player to the game \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1Game_a38a7cce41194ee44084fb269f084528e}{next\+Player}} ()
+\begin{DoxyCompactList}\small\item\em changes the player in turn to the next one in order they were added in. Goes back to first player if necessary \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Game_a82acd895a99356c2c710bb9069cd977f}{notify}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ prev\+Player=nullptr) const
+\begin{DoxyCompactList}\small\item\em notifies that the state of the active player has been changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Game}{Game}} saves the static state. 
+
+The game elements are meant to be set before starting the game. This class keeps track of the player in turn and if the game is on, but it doesn\textquotesingle{}t change the turns or end the game.
+
+All class methods have the precondition that the object is owned by shared\+\_\+ptrs.
+
+If method\textquotesingle{}s exception guarantee isn\textquotesingle{}t nothrow, method can always leak \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} (out of memory). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Game_afb3f5692a476712555396b2e7397aa36}\label{classInterface_1_1Game_afb3f5692a476712555396b2e7397aa36}} 
+\index{Interface::Game@{Interface::Game}!Game@{Game}}
+\index{Game@{Game}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Interface\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+default 
+
+\begin{DoxyPostcond}{Postcondition}
+game doesn\textquotesingle{}t contain players or locations, and the counsilordeck is empty. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Game_a3e3d3f093339cc404f510bd5c51da11e}\label{classInterface_1_1Game_a3e3d3f093339cc404f510bd5c51da11e}} 
+\index{Interface::Game@{Interface::Game}!active@{active}}
+\index{active@{active}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool Interface\+::\+Game\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the info if the game is running or not 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, is game is active 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a93b1e2cfa53caf554d6535c2dc3870ab}\label{classInterface_1_1Game_a93b1e2cfa53caf554d6535c2dc3870ab}} 
+\index{Interface::Game@{Interface::Game}!addLocation@{addLocation}}
+\index{addLocation@{addLocation}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{addLocation()}{addLocation()}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::add\+Location (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption})}
+
+
+
+adds a new location to the game 
+
+\begin{DoxyPrecond}{Precondition}
+location 1= nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em location} & shared\+\_\+ptr to the location to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+location has been added to the game 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1FormatException}{Format\+Exception}}} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em IOException} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1KeyException}{Key\+Exception}}} & max amount of locations not found in settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1StateException}{State\+Exception}}} & amount of locations is over the max limit \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1Game_ada56fa4c0da3e2db8887837fa1e8623e}\label{classInterface_1_1Game_ada56fa4c0da3e2db8887837fa1e8623e}} 
+\index{Interface::Game@{Interface::Game}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Game\+::add\+Player (\begin{DoxyParamCaption}\item[{const QString \&}]{name }\end{DoxyParamCaption})}
+
+
+
+adds a player to the game 
+
+\begin{DoxyPrecond}{Precondition}
+no players have been created outside of this class 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the player to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the added player 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+player has been added to the game 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1FormatException}{Format\+Exception}}} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em IOException} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1KeyException}{Key\+Exception}}} & max amount of players not found in settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1StateException}{State\+Exception}}} & amount of players is over the max limit \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1Game_af0eac90e9824b019b2cb647b0eeb79a2}\label{classInterface_1_1Game_af0eac90e9824b019b2cb647b0eeb79a2}} 
+\index{Interface::Game@{Interface::Game}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::add\+Player (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player }\end{DoxyParamCaption})}
+
+
+
+add a player to the game 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+player has been added to the game 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1FormatException}{Format\+Exception}}} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em IOException} & error reading settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1KeyException}{Key\+Exception}}} & max amount of players not found in settings (\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}}) \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1StateException}{State\+Exception}}} & amount of players is over the max limit \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1Game_a72cef12f1da9bcd3b3c8cffaad5910e1}\label{classInterface_1_1Game_a72cef12f1da9bcd3b3c8cffaad5910e1}} 
+\index{Interface::Game@{Interface::Game}!councilorDeck@{councilorDeck}}
+\index{councilorDeck@{councilorDeck}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{councilorDeck()}{councilorDeck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Game\+::councilor\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the counsilordeck 
+
+\begin{DoxyPrecond}{Precondition}
+\+: -\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to a deck containing the counsilors 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a54ff79f33ca39118f3aa74bb34a7b5a9}\label{classInterface_1_1Game_a54ff79f33ca39118f3aa74bb34a7b5a9}} 
+\index{Interface::Game@{Interface::Game}!councilorDeck@{councilorDeck}}
+\index{councilorDeck@{councilorDeck}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{councilorDeck()}{councilorDeck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1DeckInterface}{Deck\+Interface}} $>$ Interface\+::\+Game\+::councilor\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the counsilordeck 
+
+\begin{DoxyPrecond}{Precondition}
+\+: -\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to a deck containing the counsilors 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a7cee2875de3d3a5d99c980e3287b6886}\label{classInterface_1_1Game_a7cee2875de3d3a5d99c980e3287b6886}} 
+\index{Interface::Game@{Interface::Game}!currentPlayer@{currentPlayer}}
+\index{currentPlayer@{currentPlayer}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{currentPlayer()}{currentPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Game\+::current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+tells who is in turn 
+
+\begin{DoxyPrecond}{Precondition}
+game has atleast 1 player 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the player in turn 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_adbbe6eb3927fd7e89c85096040026202}\label{classInterface_1_1Game_adbbe6eb3927fd7e89c85096040026202}} 
+\index{Interface::Game@{Interface::Game}!currentPlayer@{currentPlayer}}
+\index{currentPlayer@{currentPlayer}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{currentPlayer()}{currentPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Game\+::current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+tells who is in turn 
+
+\begin{DoxyPrecond}{Precondition}
+game has atleast 1 player 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the player in turn 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_aad4a8be49c33c1e2b43804e8b3db49eb}\label{classInterface_1_1Game_aad4a8be49c33c1e2b43804e8b3db49eb}} 
+\index{Interface::Game@{Interface::Game}!locations@{locations}}
+\index{locations@{locations}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{locations()}{locations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ $>$ Interface\+::\+Game\+::locations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns all locations in gameboard 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ @returnvector containing the ares 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a7ac5e19eff5bd09b01e79b8daa8d2ec6}\label{classInterface_1_1Game_a7ac5e19eff5bd09b01e79b8daa8d2ec6}} 
+\index{Interface::Game@{Interface::Game}!locations@{locations}}
+\index{locations@{locations}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{locations()}{locations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ $>$ Interface\+::\+Game\+::locations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns all locations in gameboard 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ @returnvector containing the ares 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a38a7cce41194ee44084fb269f084528e}\label{classInterface_1_1Game_a38a7cce41194ee44084fb269f084528e}} 
+\index{Interface::Game@{Interface::Game}!nextPlayer@{nextPlayer}}
+\index{nextPlayer@{nextPlayer}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{nextPlayer()}{nextPlayer()}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::next\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+changes the player in turn to the next one in order they were added in. Goes back to first player if necessary 
+
+\begin{DoxyPrecond}{Precondition}
+game has atleast 1 player 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classInterface_1_1Player}{Player}} in turn has been changed. Signal player\+Changed has been emitted. 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_a82acd895a99356c2c710bb9069cd977f}\label{classInterface_1_1Game_a82acd895a99356c2c710bb9069cd977f}} 
+\index{Interface::Game@{Interface::Game}!notify@{notify}}
+\index{notify@{notify}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::notify (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{prev\+Player = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+
+
+notifies that the state of the active player has been changed 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+Player} & shared\+\_\+ptr to the player who ended their turn, or empty pointer state change is not about changing the turn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+signal player\+Changed is emitted 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_ad0717ae9901b5c1f0978879a55bd5847}\label{classInterface_1_1Game_ad0717ae9901b5c1f0978879a55bd5847}} 
+\index{Interface::Game@{Interface::Game}!playerChanged@{playerChanged}}
+\index{playerChanged@{playerChanged}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{playerChanged}{playerChanged}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::player\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{acting\+Player }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+this signal is emitted when the state of active player is changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acting\+Player} & is the player who caused this change to happen ( previous or current player ) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_1_1Game_a6aa9395c5b3167cee45e20a2da733428}\label{classInterface_1_1Game_a6aa9395c5b3167cee45e20a2da733428}} 
+\index{Interface::Game@{Interface::Game}!players@{players}}
+\index{players@{players}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{players()}{players()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ $>$ Interface\+::\+Game\+::players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns all players 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+vector containing players 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_abdee78a5912a9362828f651d8b2c4205}\label{classInterface_1_1Game_abdee78a5912a9362828f651d8b2c4205}} 
+\index{Interface::Game@{Interface::Game}!players@{players}}
+\index{players@{players}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{players()}{players()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ $>$ Interface\+::\+Game\+::players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns all players 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+vector containing players 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Game_afa2f4f6871cbc8bedca6e03f92b95445}\label{classInterface_1_1Game_afa2f4f6871cbc8bedca6e03f92b95445}} 
+\index{Interface::Game@{Interface::Game}!setActive@{setActive}}
+\index{setActive@{setActive}!Interface::Game@{Interface::Game}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily void Interface\+::\+Game\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})}
+
+
+
+starts or pauses the game 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em active} & is true if starting the game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+game is set to the given state 
+
+exceptions guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+game.\+cpp\item 
+mocs/moc\+\_\+game.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{classInterface_1_1ActionInterface}{}\doxysection{Interface\+::Action\+Interface Class Reference}
+\label{classInterface_1_1ActionInterface}\index{Interface::ActionInterface@{Interface::ActionInterface}}
+
+
+Interface fos a singular action.  
+
+
+
+
+{\ttfamily \#include $<$actioninterface.\+h$>$}
+
+Inheritance diagram for Interface\+::Action\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.160622cm]{classInterface_1_1ActionInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1ActionInterface_afccb2c6bec39ff231b4f8aeb7167e69c}\label{classInterface_1_1ActionInterface_afccb2c6bec39ff231b4f8aeb7167e69c}} 
+\mbox{\hyperlink{classInterface_1_1ActionInterface_afccb2c6bec39ff231b4f8aeb7167e69c}{Action\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Default, exists for doc purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1ActionInterface_aed0efaf02277e25c9638682d64c6e5da}\label{classInterface_1_1ActionInterface_aed0efaf02277e25c9638682d64c6e5da}} 
+virtual \mbox{\hyperlink{classInterface_1_1ActionInterface_aed0efaf02277e25c9638682d64c6e5da}{$\sim$\+Action\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em default, as interface classes should always have a virtual destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{can\+Perform}} () const =0
+\begin{DoxyCompactList}\small\item\em tells if the action is possible \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{perform}} ()=0
+\begin{DoxyCompactList}\small\item\em performs the action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface fos a singular action. 
+
+If class method is not nothrow, it can always leak \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} (out of memory) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}\label{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}} 
+\index{Interface::ActionInterface@{Interface::ActionInterface}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Interface::ActionInterface@{Interface::ActionInterface}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+Action\+Interface\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tells if the action is possible 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if can be performed 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception gurantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classInterface_1_1WithdrawAction_a17957289387964cad0a51d517af70e44}{Interface\+::\+Withdraw\+Action}}, \mbox{\hyperlink{classAction_1_1OwnLocationAction_a63d967dfba7fcaffcc3487cbda3e0058}{Action\+::\+Own\+Location\+Action}}, \mbox{\hyperlink{classAction_1_1SendAgentAction_ab19691361237bead75faad6b7183ba45}{Action\+::\+Send\+Agent\+Action}}, \mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a20a6482effdec98e73e3b3224a7b8c6f}{Action\+::\+Shuffle\+And\+Draw\+Action}}, and \mbox{\hyperlink{classAction_1_1StrengthenConnections_ade387362a99ec81b9ce9d56d55a09a72}{Action\+::\+Strengthen\+Connections}}.
+
+\mbox{\Hypertarget{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}\label{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}} 
+\index{Interface::ActionInterface@{Interface::ActionInterface}!perform@{perform}}
+\index{perform@{perform}!Interface::ActionInterface@{Interface::ActionInterface}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Action\+Interface\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+performs the action 
+
+\begin{DoxyPrecond}{Precondition}
+action must be possible 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception gurantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classInterface_1_1WithdrawAction_a266e4d4dae10c0ced008f1ad65da66d5}{Interface\+::\+Withdraw\+Action}}, \mbox{\hyperlink{classAction_1_1OwnLocationAction_ae3a5d5ea576f91bd6ddd9e94800b5b99}{Action\+::\+Own\+Location\+Action}}, \mbox{\hyperlink{classAction_1_1SendAgentAction_a1d5bb8eae193c5dac94392329ba812bb}{Action\+::\+Send\+Agent\+Action}}, \mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a6153113509685c440e7cc4b2d4382fc5}{Action\+::\+Shuffle\+And\+Draw\+Action}}, and \mbox{\hyperlink{classAction_1_1StrengthenConnections_a5f76f0518841464ca0a274672a5f5bd6}{Action\+::\+Strengthen\+Connections}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{actioninterface_8h}{actioninterface.\+h}}\end{DoxyCompactItemize}

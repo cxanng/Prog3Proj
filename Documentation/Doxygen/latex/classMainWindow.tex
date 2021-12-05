@@ -1,0 +1,168 @@
+\hypertarget{classMainWindow}{}\doxysection{Main\+Window Class Reference}
+\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+The \mbox{\hyperlink{classMainWindow}{Main\+Window}} class.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainWindow}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_a37d293e7856b1ce69164db1422057700}{end\+Game}} ()
+\begin{DoxyCompactList}\small\item\em end\+Game is emitted when running out of time, and when one player is running out of agent card \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}\label{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=0)
+\item 
+void \mbox{\hyperlink{classMainWindow_a3e9adeb21062c0ddb09899001f04396d}{draw\+Slots}} (int rows=4, int columns=7)
+\begin{DoxyCompactList}\small\item\em draw\+Slots \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCardItem}{Card\+Item}} $\ast$ \mbox{\hyperlink{classMainWindow_a402efb0fc0c6da91b84f5908a45a06b5}{draw\+Card\+To\+Slot}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card, int row, int column)
+\begin{DoxyCompactList}\small\item\em draw\+Card\+To\+Slot draws a card with the info gathered through cardinterface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCardItem}{Card\+Item}} $\ast$ \mbox{\hyperlink{classMainWindow_a755b538227df6817934014409a17e04b}{draw\+Custom\+Card\+To\+Slot}} (int row, int column, QString name, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card=nullptr, QString description=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em draw\+Custom\+Card\+To\+Slot draws card to the slot provided \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_aaa03ed2935f0264b188109dee0811fee}{set\+Table\+Background}} (QImage img)
+\begin{DoxyCompactList}\small\item\em set\+Table\+Background, set the background for scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_aa05813d353cccf400d3561cc309089af}{start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em start\+Game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classMainWindow}{Main\+Window}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainWindow_a402efb0fc0c6da91b84f5908a45a06b5}\label{classMainWindow_a402efb0fc0c6da91b84f5908a45a06b5}} 
+\index{MainWindow@{MainWindow}!drawCardToSlot@{drawCardToSlot}}
+\index{drawCardToSlot@{drawCardToSlot}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{drawCardToSlot()}{drawCardToSlot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCardItem}{Card\+Item}} $\ast$ Main\+Window\+::draw\+Card\+To\+Slot (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$}]{card,  }\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+draw\+Card\+To\+Slot draws a card with the info gathered through cardinterface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & \\
+\hline
+{\em row} & $<$ rows \\
+\hline
+{\em column} & $<$ columns \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the card item drawn. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\+: Drawing cards on top of each other is allowed, but the behaviour of cards other than the topmost one is undetermined. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMainWindow_a755b538227df6817934014409a17e04b}\label{classMainWindow_a755b538227df6817934014409a17e04b}} 
+\index{MainWindow@{MainWindow}!drawCustomCardToSlot@{drawCustomCardToSlot}}
+\index{drawCustomCardToSlot@{drawCustomCardToSlot}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{drawCustomCardToSlot()}{drawCustomCardToSlot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCardItem}{Card\+Item}} $\ast$ Main\+Window\+::draw\+Custom\+Card\+To\+Slot (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{QString}]{name,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$}]{card = {\ttfamily nullptr},  }\item[{QString}]{description = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+draw\+Custom\+Card\+To\+Slot draws card to the slot provided 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & $<$ rows \\
+\hline
+{\em column} & $<$ columns \\
+\hline
+{\em name} & \\
+\hline
+{\em card} & \\
+\hline
+{\em description} & \\
+\hline
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the card item drawn 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\+: Drawing cards on top of each other is allowed, but the behaviour of cards other than the topmost one is undetermined. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMainWindow_a3e9adeb21062c0ddb09899001f04396d}\label{classMainWindow_a3e9adeb21062c0ddb09899001f04396d}} 
+\index{MainWindow@{MainWindow}!drawSlots@{drawSlots}}
+\index{drawSlots@{drawSlots}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{drawSlots()}{drawSlots()}}
+{\footnotesize\ttfamily void Main\+Window\+::draw\+Slots (\begin{DoxyParamCaption}\item[{int}]{rows = {\ttfamily 4},  }\item[{int}]{columns = {\ttfamily 7} }\end{DoxyParamCaption})}
+
+
+
+draw\+Slots 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & \\
+\hline
+{\em columns} & \\
+\hline
+\end{DoxyParams}
+Draws rows $\ast$ colums amount of cardslots to the view and fits the view to show all ( if screen permits ). \begin{DoxyNote}{Note}
+This function should be called before placing any cards. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMainWindow_a37d293e7856b1ce69164db1422057700}\label{classMainWindow_a37d293e7856b1ce69164db1422057700}} 
+\index{MainWindow@{MainWindow}!endGame@{endGame}}
+\index{endGame@{endGame}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{endGame}{endGame}}
+{\footnotesize\ttfamily void Main\+Window\+::end\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+end\+Game is emitted when running out of time, and when one player is running out of agent card 
+
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: no-\/throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classMainWindow_aaa03ed2935f0264b188109dee0811fee}\label{classMainWindow_aaa03ed2935f0264b188109dee0811fee}} 
+\index{MainWindow@{MainWindow}!setTableBackground@{setTableBackground}}
+\index{setTableBackground@{setTableBackground}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setTableBackground()}{setTableBackground()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Table\+Background (\begin{DoxyParamCaption}\item[{QImage}]{img }\end{DoxyParamCaption})}
+
+
+
+set\+Table\+Background, set the background for scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img,QImage} & of the scene background \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMainWindow_aa05813d353cccf400d3561cc309089af}\label{classMainWindow_aa05813d353cccf400d3561cc309089af}} 
+\index{MainWindow@{MainWindow}!startGame@{startGame}}
+\index{startGame@{startGame}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Main\+Window\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start\+Game 
+
+\begin{DoxyPrecond}{Precondition}
+all setting is done 
+\end{DoxyPrecond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+moc\+\_\+mainwindow.\+cpp\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

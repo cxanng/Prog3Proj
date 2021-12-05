@@ -1,0 +1,126 @@
+\hypertarget{classInterface_1_1SettingsReader}{}\doxysection{Interface\+::Settings\+Reader Class Reference}
+\label{classInterface_1_1SettingsReader}\index{Interface::SettingsReader@{Interface::SettingsReader}}
+
+
+\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}} is a singleton class for reading settings.  
+
+
+
+
+{\ttfamily \#include $<$settingsreader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1SettingsReader_a65d449a17c378abf087288e2009532c3}\label{classInterface_1_1SettingsReader_a65d449a17c378abf087288e2009532c3}} 
+\mbox{\hyperlink{classInterface_1_1SettingsReader_a65d449a17c378abf087288e2009532c3}{$\sim$\+Settings\+Reader}} ()=default
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1SettingsReader_a8131b83b8fbae0d1af9e6fdeb9719583}{read\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em read game settings from set file \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1SettingsReader_a2597c4ab50b7cfd34410542049238214}{get\+Value}} (QString key)
+\begin{DoxyCompactList}\small\item\em get value for key. Read settings, if not done before. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1SettingsReader_ab3bd0bdf773a853923fe54f3b0b90d6e}{set\+Path}} (const QString filepath)
+\begin{DoxyCompactList}\small\item\em set the filepath where from settings are read \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1SettingsReader_a3a54dc3735ce85b9292226fc130e207c}\label{classInterface_1_1SettingsReader_a3a54dc3735ce85b9292226fc130e207c}} 
+static \mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}} \mbox{\hyperlink{classInterface_1_1SettingsReader_a3a54dc3735ce85b9292226fc130e207c}{READER}}
+\begin{DoxyCompactList}\small\item\em READER singleton object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1SettingsReader}{Settings\+Reader}} is a singleton class for reading settings. 
+
+Through this class it is possible to read key-\/value pairs that are strings. The file can be set, and the setting are read lazily when foirst asked for or when asked specifically.
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (Out of memory) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1SettingsReader_a2597c4ab50b7cfd34410542049238214}\label{classInterface_1_1SettingsReader_a2597c4ab50b7cfd34410542049238214}} 
+\index{Interface::SettingsReader@{Interface::SettingsReader}!getValue@{getValue}}
+\index{getValue@{getValue}!Interface::SettingsReader@{Interface::SettingsReader}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily QString Interface\+::\+Settings\+Reader\+::get\+Value (\begin{DoxyParamCaption}\item[{QString}]{key }\end{DoxyParamCaption})}
+
+
+
+get value for key. Read settings, if not done before. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value for key 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+settings have been read 
+
+exception guarantee\+: basic 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1FormatException}{Format\+Exception}}} & when the format of the file is incorrect \\
+\hline
+{\em IOException} & when the file can\textquotesingle{}t be opened \\
+\hline
+{\em \mbox{\hyperlink{classInterface_1_1KeyException}{Key\+Exception}}} & when the key is unknown \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1SettingsReader_a8131b83b8fbae0d1af9e6fdeb9719583}\label{classInterface_1_1SettingsReader_a8131b83b8fbae0d1af9e6fdeb9719583}} 
+\index{Interface::SettingsReader@{Interface::SettingsReader}!readSettings@{readSettings}}
+\index{readSettings@{readSettings}!Interface::SettingsReader@{Interface::SettingsReader}}
+\doxysubsubsection{\texorpdfstring{readSettings()}{readSettings()}}
+{\footnotesize\ttfamily void Interface\+::\+Settings\+Reader\+::read\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read game settings from set file 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+settings have been read 
+
+exception guarantee\+: basic 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1FormatException}{Format\+Exception}}} & when the format of the file is incorrect \\
+\hline
+{\em IOException} & when the file can\textquotesingle{}t be opened \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classInterface_1_1SettingsReader_ab3bd0bdf773a853923fe54f3b0b90d6e}\label{classInterface_1_1SettingsReader_ab3bd0bdf773a853923fe54f3b0b90d6e}} 
+\index{Interface::SettingsReader@{Interface::SettingsReader}!setPath@{setPath}}
+\index{setPath@{setPath}!Interface::SettingsReader@{Interface::SettingsReader}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Interface\+::\+Settings\+Reader\+::set\+Path (\begin{DoxyParamCaption}\item[{const QString}]{filepath }\end{DoxyParamCaption})}
+
+
+
+set the filepath where from settings are read 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{settingsreader_8h}{settingsreader.\+h}}\item 
+settingsreader.\+cpp\end{DoxyCompactItemize}

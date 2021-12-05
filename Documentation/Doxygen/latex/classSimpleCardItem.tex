@@ -1,0 +1,56 @@
+\hypertarget{classSimpleCardItem}{}\doxysection{Simple\+Card\+Item Class Reference}
+\label{classSimpleCardItem}\index{SimpleCardItem@{SimpleCardItem}}
+
+
+The \mbox{\hyperlink{classSimpleCardItem}{Simple\+Card\+Item}} class.  
+
+
+
+
+{\ttfamily \#include $<$simplecarditem.\+hh$>$}
+
+Inheritance diagram for Simple\+Card\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimpleCardItem}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_a48747c21fdf198a9611646a6c9cca057}\label{classSimpleCardItem_a48747c21fdf198a9611646a6c9cca057}} 
+void {\bfseries clicked} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_accd1302dd998603176059bbf2fcf3c92}\label{classSimpleCardItem_accd1302dd998603176059bbf2fcf3c92}} 
+{\bfseries Simple\+Card\+Item} (int width, int height, int padding\+\_\+x, int padding\+\_\+y, QString name, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card, QString description=\char`\"{}\char`\"{}, QColor color=Qt\+::white, QObject $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_a0fb6eff75ca8eecc17088c6200416c16}\label{classSimpleCardItem_a0fb6eff75ca8eecc17088c6200416c16}} 
+QRectF {\bfseries bounding\+Rect} () const override
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_adf2d2a27af776392f60394078740a2a3}\label{classSimpleCardItem_adf2d2a27af776392f60394078740a2a3}} 
+void {\bfseries paint} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget=nullptr) override
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_a67e8b8eb44dba7ef27022bc871be2873}\label{classSimpleCardItem_a67e8b8eb44dba7ef27022bc871be2873}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ {\bfseries get\+Card} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleCardItem_a6cc52ba009da5da7bcb2e8836796f7bb}\label{classSimpleCardItem_a6cc52ba009da5da7bcb2e8836796f7bb}} 
+void {\bfseries mouse\+Press\+Event} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classSimpleCardItem}{Simple\+Card\+Item}} class. 
+
+This is a simple graphics object to represent a card. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+simplecarditem.\+hh\item 
+simplecarditem.\+cpp\item 
+mocs/moc\+\_\+simplecarditem.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{classInterface_1_1ManualControl}{}\doxysection{Interface\+::Manual\+Control Class Reference}
+\label{classInterface_1_1ManualControl}\index{Interface::ManualControl@{Interface::ManualControl}}
+
+
+\mbox{\hyperlink{classInterface_1_1ManualControl}{Manual\+Control}} kuvaa käyttöliittymän kautta pelia pelaavaa ihmistä. Perii \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} eli sisältää myös sen.  
+
+
+
+
+{\ttfamily \#include $<$manualcontrol.\+h$>$}
+
+Inheritance diagram for Interface\+::Manual\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1ManualControl}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1ManualControl_af905c09420d8a4ddb8510f7bbae7e285}{Manual\+Control}} ()
+\begin{DoxyCompactList}\small\item\em oletusrakentaja \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1ManualControl_a6a56769ac50720ee4f096d415e7cff71}\label{classInterface_1_1ManualControl_a6a56769ac50720ee4f096d415e7cff71}} 
+virtual \mbox{\hyperlink{classInterface_1_1ManualControl_a6a56769ac50720ee4f096d415e7cff71}{$\sim$\+Manual\+Control}} ()=default
+\begin{DoxyCompactList}\small\item\em oletusarvoinen virtuaalipurkaja \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1ManualControl_aa6875139ccf82a8e8e6a8c7e2cddca5c}{next\+Action}} ()
+\begin{DoxyCompactList}\small\item\em next\+Action palauttaa seuraavan siirron \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1ManualControl_a2d90e91feef7ee5bfcdb7eee5f0c22d3}{set\+Next\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$ action)
+\begin{DoxyCompactList}\small\item\em set\+Next\+Action asettaa seuraavan siirron \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1ManualControl}{Manual\+Control}} kuvaa käyttöliittymän kautta pelia pelaavaa ihmistä. Perii \mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} eli sisältää myös sen. 
+
+Tämä luokka on tarkoitettu kuvaamaan ihmispelaajaa, eikä osaa itsessään tuottaa siirtoja. Sen sijaan sille voi ulkoa päin (käyttöliittymästä käskien) asettaa siirron, jonka se sitten palauttaa seuraavaksi.
+
+Jos luokan metodi ei ole poikkeustakuultaan nothrow, voi metodista aina vuotaa ulos poikkeus {\ttfamily std\+::bad\+\_\+alloc} (muisti loppui). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1ManualControl_af905c09420d8a4ddb8510f7bbae7e285}\label{classInterface_1_1ManualControl_af905c09420d8a4ddb8510f7bbae7e285}} 
+\index{Interface::ManualControl@{Interface::ManualControl}!ManualControl@{ManualControl}}
+\index{ManualControl@{ManualControl}!Interface::ManualControl@{Interface::ManualControl}}
+\doxysubsubsection{\texorpdfstring{ManualControl()}{ManualControl()}}
+{\footnotesize\ttfamily Interface\+::\+Manual\+Control\+::\+Manual\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+oletusrakentaja 
+
+\begin{DoxyPostcond}{Postcondition}
+hallintaolio ilman seuraavaa siirtoa 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1ManualControl_aa6875139ccf82a8e8e6a8c7e2cddca5c}\label{classInterface_1_1ManualControl_aa6875139ccf82a8e8e6a8c7e2cddca5c}} 
+\index{Interface::ManualControl@{Interface::ManualControl}!nextAction@{nextAction}}
+\index{nextAction@{nextAction}!Interface::ManualControl@{Interface::ManualControl}}
+\doxysubsubsection{\texorpdfstring{nextAction()}{nextAction()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$ Interface\+::\+Manual\+Control\+::next\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+next\+Action palauttaa seuraavan siirron 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+jaettu osoitin seuraavaan siirtoon, tai tyhjä osoitin jos sitä ei ole asetettu 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+seuraavaa siirtoa ei ole asetettu 
+
+Poikkeustakuu\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ControlInterface_a1e872051e9c70592929a2f2df6c7ee01}{Interface\+::\+Control\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1ManualControl_a2d90e91feef7ee5bfcdb7eee5f0c22d3}\label{classInterface_1_1ManualControl_a2d90e91feef7ee5bfcdb7eee5f0c22d3}} 
+\index{Interface::ManualControl@{Interface::ManualControl}!setNextAction@{setNextAction}}
+\index{setNextAction@{setNextAction}!Interface::ManualControl@{Interface::ManualControl}}
+\doxysubsubsection{\texorpdfstring{setNextAction()}{setNextAction()}}
+{\footnotesize\ttfamily void Interface\+::\+Manual\+Control\+::set\+Next\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$}]{action }\end{DoxyParamCaption})}
+
+
+
+set\+Next\+Action asettaa seuraavan siirron 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em action} & seuraava siirto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+seuraava siirto on asetettu parametrin mukaiseksi 
+
+Poikkeustakuu\+: nothrow 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{manualcontrol_8h}{manualcontrol.\+h}}\item 
+manualcontrol.\+cpp\end{DoxyCompactItemize}

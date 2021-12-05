@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Zap Sprayfin",
+        "title": "Initial agent for ",
+        "img": ":/cards/agent-player-1.png"
+    },
+    {
+        "name": "Slippery Waverider",
+        "title": "Initial agent for ",
+        "img": ":/cards/agent-player-2.png"
+    },
+    {
+        "name": "Plucky Poro",
+        "title": "Initial agent for ",
+        "img": ":/cards/agent-player-3.png"
+    },
+    {
+        "name": "Plunder Poro",
+        "title": "Initial agent for ",
+        "img": ":/cards/agent-player-4.png"
+    }
+]

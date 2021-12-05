@@ -1,0 +1,374 @@
+\hypertarget{classCardModel_1_1Agent}{}\doxysection{Card\+Model\+::Agent Class Reference}
+\label{classCardModel_1_1Agent}\index{CardModel::Agent@{CardModel::Agent}}
+
+
+The \mbox{\hyperlink{classCardModel_1_1Agent}{Agent}} class represent agents Inherits from Agent\+Interface.  
+
+
+
+
+{\ttfamily \#include $<$agent.\+h$>$}
+
+Inheritance diagram for Card\+Model\+::Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCardModel_1_1Agent}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCardModel_1_1Agent_ae04fd8da3d8f614c9cc07f88fa3d198d}{Agent}} (const QString \&\mbox{\hyperlink{classCardModel_1_1Agent_a3ed950ec154a82e63d49f98e2976c0ad}{name}}, const QString \&\mbox{\hyperlink{classCardModel_1_1Agent_a05cd5ddb8db0e1d68fac04acee68f08d}{title}}, bool common=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classCardModel_1_1Agent}{Agent}} Constructor. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classCardModel_1_1Agent_a9adab6aee6a8d3d5da19c0e47b0ed0d3}{type\+Name}} () const
+\begin{DoxyCompactList}\small\item\em type\+Name, return the type of the card \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classCardModel_1_1Agent_a3ed950ec154a82e63d49f98e2976c0ad}{name}} () const
+\begin{DoxyCompactList}\small\item\em name, get the name of the card \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classCardModel_1_1Agent_a05cd5ddb8db0e1d68fac04acee68f08d}{title}} () const
+\begin{DoxyCompactList}\small\item\em title, get the title of the card \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classCardModel_1_1Agent_a422f873c9fffa17599ce27e73ff025fb}{location}} () const
+\begin{DoxyCompactList}\small\item\em location, tell which location the card related to \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classCardModel_1_1Agent_a1b9191a852b749cf87f3b6a98b2c9852}{owner}} () const
+\begin{DoxyCompactList}\small\item\em owner, tell who owns the card \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardModel_1_1Agent_a5cfa8cb197ecc3562508dca832b8f9fb}{set\+Owner}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classCardModel_1_1Agent_a1b9191a852b749cf87f3b6a98b2c9852}{owner}})
+\begin{DoxyCompactList}\small\item\em set\+Owner, set owner to the card \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCardModel_1_1Agent_afdeb0984a038ed43e94cfdb87c889c4d}{is\+Common}} () const
+\begin{DoxyCompactList}\small\item\em is\+Common, tells if this is a common/\char`\"{}generic\char`\"{} agent with no relation to any location \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classCardModel_1_1Agent_ace6fed55a09115b162bbbd136c227ab0}{placement}} () const
+\begin{DoxyCompactList}\small\item\em placement, return info about the agent\textquotesingle{}s placement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardModel_1_1Agent_a1d16c827601f5c0e38f8e57cd0b90b84}{set\+Placement}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classCardModel_1_1Agent_ace6fed55a09115b162bbbd136c227ab0}{placement}})
+\begin{DoxyCompactList}\small\item\em set\+Placement, set new placement for the agent \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classCardModel_1_1Agent_aebd84c3c41899c43b066c070271c36ee}{connections}} () const
+\begin{DoxyCompactList}\small\item\em connections, tell about the current connection state of agent and location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardModel_1_1Agent_aabcbb8e9eb4601c3dd37f9df20a7fc98}{set\+Connections}} (unsigned short \mbox{\hyperlink{classCardModel_1_1Agent_aebd84c3c41899c43b066c070271c36ee}{connections}})
+\begin{DoxyCompactList}\small\item\em set\+Connections, set new connection level to the agent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardModel_1_1Agent_ad882d523b6f25cf6e5c8d55bc5b0aa29}{modify\+Connections}} (short change)
+\begin{DoxyCompactList}\small\item\em modify\+Conncetions, change the amount of connection \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCardModel_1_1Agent}{Agent}} class represent agents Inherits from Agent\+Interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCardModel_1_1Agent_ae04fd8da3d8f614c9cc07f88fa3d198d}\label{classCardModel_1_1Agent_ae04fd8da3d8f614c9cc07f88fa3d198d}} 
+\index{CardModel::Agent@{CardModel::Agent}!Agent@{Agent}}
+\index{Agent@{Agent}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{Agent()}{Agent()}}
+{\footnotesize\ttfamily Card\+Model\+::\+Agent\+::\+Agent (\begin{DoxyParamCaption}\item[{const QString \&}]{name,  }\item[{const QString \&}]{title,  }\item[{bool}]{common = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classCardModel_1_1Agent}{Agent}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name,Agent\textquotesingle{}s} & name \\
+\hline
+{\em title,Agent\textquotesingle{}title} & \\
+\hline
+{\em common,tell} & if this is generic \\
+\hline
+{\em owner,null} & ptr if no one own the card at the begining of game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classCardModel_1_1Agent}{Agent}} has given name, title, common, owner if possible, no location, no placement, no connections. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCardModel_1_1Agent_aebd84c3c41899c43b066c070271c36ee}\label{classCardModel_1_1Agent_aebd84c3c41899c43b066c070271c36ee}} 
+\index{CardModel::Agent@{CardModel::Agent}!connections@{connections}}
+\index{connections@{connections}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{connections()}{connections()}}
+{\footnotesize\ttfamily unsigned short Card\+Model\+::\+Agent\+::connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+connections, tell about the current connection state of agent and location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+current level of connrections 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no-\/throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_afdeb0984a038ed43e94cfdb87c889c4d}\label{classCardModel_1_1Agent_afdeb0984a038ed43e94cfdb87c889c4d}} 
+\index{CardModel::Agent@{CardModel::Agent}!isCommon@{isCommon}}
+\index{isCommon@{isCommon}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{isCommon()}{isCommon()}}
+{\footnotesize\ttfamily bool Card\+Model\+::\+Agent\+::is\+Common (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+is\+Common, tells if this is a common/\char`\"{}generic\char`\"{} agent with no relation to any location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if generic 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_a455074656be632013504401fbb42f0d6}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a422f873c9fffa17599ce27e73ff025fb}\label{classCardModel_1_1Agent_a422f873c9fffa17599ce27e73ff025fb}} 
+\index{CardModel::Agent@{CardModel::Agent}!location@{location}}
+\index{location@{location}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$ Card\+Model\+::\+Agent\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+location, tell which location the card related to 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak pointer to the location, null ptr if none 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guaratee\+: no-\/throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_abf1e60d7f43adacf09c2717d34fade23}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_ad882d523b6f25cf6e5c8d55bc5b0aa29}\label{classCardModel_1_1Agent_ad882d523b6f25cf6e5c8d55bc5b0aa29}} 
+\index{CardModel::Agent@{CardModel::Agent}!modifyConnections@{modifyConnections}}
+\index{modifyConnections@{modifyConnections}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{modifyConnections()}{modifyConnections()}}
+{\footnotesize\ttfamily void Card\+Model\+::\+Agent\+::modify\+Connections (\begin{DoxyParamCaption}\item[{short}]{change }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+modify\+Conncetions, change the amount of connection 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em change,the} & given amount to change the connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+connection level is changed according to the given params 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_a62b5e692d9145d6099d9d324946a16b7}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a3ed950ec154a82e63d49f98e2976c0ad}\label{classCardModel_1_1Agent_a3ed950ec154a82e63d49f98e2976c0ad}} 
+\index{CardModel::Agent@{CardModel::Agent}!name@{name}}
+\index{name@{name}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily QString Card\+Model\+::\+Agent\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+name, get the name of the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+name as the string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aeb0c3aeb4fa2311d46eb9e9f00c46d76}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a1b9191a852b749cf87f3b6a98b2c9852}\label{classCardModel_1_1Agent_a1b9191a852b749cf87f3b6a98b2c9852}} 
+\index{CardModel::Agent@{CardModel::Agent}!owner@{owner}}
+\index{owner@{owner}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{owner()}{owner()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Card\+Model\+::\+Agent\+::owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+owner, tell who owns the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak ptr to the owner of the card, null ptr if none 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no-\/throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aa1354642e1d7a65470ab531f3c245af7}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_ace6fed55a09115b162bbbd136c227ab0}\label{classCardModel_1_1Agent_ace6fed55a09115b162bbbd136c227ab0}} 
+\index{CardModel::Agent@{CardModel::Agent}!placement@{placement}}
+\index{placement@{placement}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{placement()}{placement()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ Card\+Model\+::\+Agent\+::placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+placement, return info about the agent\textquotesingle{}s placement 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the location agent is in, or empty ptr if not on board 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_a98a6384843224dffd590cdcaf018ec9c}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_aabcbb8e9eb4601c3dd37f9df20a7fc98}\label{classCardModel_1_1Agent_aabcbb8e9eb4601c3dd37f9df20a7fc98}} 
+\index{CardModel::Agent@{CardModel::Agent}!setConnections@{setConnections}}
+\index{setConnections@{setConnections}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{setConnections()}{setConnections()}}
+{\footnotesize\ttfamily void Card\+Model\+::\+Agent\+::set\+Connections (\begin{DoxyParamCaption}\item[{unsigned short}]{connections }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Connections, set new connection level to the agent 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em connections,new} & connection level of connections level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+new connection is set according to the given param 
+
+guarantee exception\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em State\+Exception} & if variant would be broken \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_ac5e1f6991b3fce989d925183cdd6bc9b}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a5cfa8cb197ecc3562508dca832b8f9fb}\label{classCardModel_1_1Agent_a5cfa8cb197ecc3562508dca832b8f9fb}} 
+\index{CardModel::Agent@{CardModel::Agent}!setOwner@{setOwner}}
+\index{setOwner@{setOwner}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{setOwner()}{setOwner()}}
+{\footnotesize\ttfamily void Card\+Model\+::\+Agent\+::set\+Owner (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Owner, set owner to the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em owner,weak} & pointer to new owner of the card, or empty if removed fron possession \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\+: card has new owner or no one owns the card. 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a4ea5b682171c6aa6267b34a74083a420}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a1d16c827601f5c0e38f8e57cd0b90b84}\label{classCardModel_1_1Agent_a1d16c827601f5c0e38f8e57cd0b90b84}} 
+\index{CardModel::Agent@{CardModel::Agent}!setPlacement@{setPlacement}}
+\index{setPlacement@{setPlacement}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{setPlacement()}{setPlacement()}}
+{\footnotesize\ttfamily void Card\+Model\+::\+Agent\+::set\+Placement (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{placement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Placement, set new placement for the agent 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em placement} & location, empty if not on board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+new location is set to the agent 
+
+exception guarantee\+: no-\/throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1AgentInterface_abc7e9c0d072f315a4741df12deeb4955}{Interface\+::\+Agent\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a05cd5ddb8db0e1d68fac04acee68f08d}\label{classCardModel_1_1Agent_a05cd5ddb8db0e1d68fac04acee68f08d}} 
+\index{CardModel::Agent@{CardModel::Agent}!title@{title}}
+\index{title@{title}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily QString Card\+Model\+::\+Agent\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+title, get the title of the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+title of the agent as string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no-\/throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a6eb68e14723995efab8a3020357fa033}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classCardModel_1_1Agent_a9adab6aee6a8d3d5da19c0e47b0ed0d3}\label{classCardModel_1_1Agent_a9adab6aee6a8d3d5da19c0e47b0ed0d3}} 
+\index{CardModel::Agent@{CardModel::Agent}!typeName@{typeName}}
+\index{typeName@{typeName}!CardModel::Agent@{CardModel::Agent}}
+\doxysubsubsection{\texorpdfstring{typeName()}{typeName()}}
+{\footnotesize\ttfamily QString Card\+Model\+::\+Agent\+::type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+type\+Name, return the type of the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card type as string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a9dd5a29dc868c20a87365123819159ca}{Interface\+::\+Card\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{agent_8h}{agent.\+h}}\item 
+agent.\+cpp\end{DoxyCompactItemize}

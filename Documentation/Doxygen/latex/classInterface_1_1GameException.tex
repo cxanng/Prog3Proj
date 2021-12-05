@@ -1,0 +1,82 @@
+\hypertarget{classInterface_1_1GameException}{}\doxysection{Interface\+::Game\+Exception Class Reference}
+\label{classInterface_1_1GameException}\index{Interface::GameException@{Interface::GameException}}
+
+
+\mbox{\hyperlink{classInterface_1_1GameException}{Game\+Exception}} is a base class for exceptions used in game.  
+
+
+
+
+{\ttfamily \#include $<$gameexception.\+h$>$}
+
+Inheritance diagram for Interface\+::Game\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.085271cm]{classInterface_1_1GameException}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1GameException_abd17466481adf8f7f18d78bb5a91e56a}{Game\+Exception}} (const QString \&\mbox{\hyperlink{classInterface_1_1GameException_ac39fee115c7831b79afd9e62fd00752d}{msg}}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1GameException_aeec2be374bf5ba3117f5b3e5b981b22c}\label{classInterface_1_1GameException_aeec2be374bf5ba3117f5b3e5b981b22c}} 
+virtual \mbox{\hyperlink{classInterface_1_1GameException_aeec2be374bf5ba3117f5b3e5b981b22c}{$\sim$\+Game\+Exception}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classInterface_1_1GameException_ac39fee115c7831b79afd9e62fd00752d}{msg}} () const
+\begin{DoxyCompactList}\small\item\em gives the message that specifies the cause of the exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1GameException}{Game\+Exception}} is a base class for exceptions used in game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1GameException_abd17466481adf8f7f18d78bb5a91e56a}\label{classInterface_1_1GameException_abd17466481adf8f7f18d78bb5a91e56a}} 
+\index{Interface::GameException@{Interface::GameException}!GameException@{GameException}}
+\index{GameException@{GameException}!Interface::GameException@{Interface::GameException}}
+\doxysubsubsection{\texorpdfstring{GameException()}{GameException()}}
+{\footnotesize\ttfamily Interface\+::\+Game\+Exception\+::\+Game\+Exception (\begin{DoxyParamCaption}\item[{const QString \&}]{msg = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to specify the cause of the exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Creates a \mbox{\hyperlink{classInterface_1_1GameException}{Game\+Exception}} with defining message 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1GameException_ac39fee115c7831b79afd9e62fd00752d}\label{classInterface_1_1GameException_ac39fee115c7831b79afd9e62fd00752d}} 
+\index{Interface::GameException@{Interface::GameException}!msg@{msg}}
+\index{msg@{msg}!Interface::GameException@{Interface::GameException}}
+\doxysubsubsection{\texorpdfstring{msg()}{msg()}}
+{\footnotesize\ttfamily QString Interface\+::\+Game\+Exception\+::msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+gives the message that specifies the cause of the exception. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Message given in constructor or empty string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gameexception_8h}{gameexception.\+h}}\item 
+gameexception.\+cpp\end{DoxyCompactItemize}

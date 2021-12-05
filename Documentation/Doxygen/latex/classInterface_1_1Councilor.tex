@@ -1,0 +1,288 @@
+\hypertarget{classInterface_1_1Councilor}{}\doxysection{Interface\+::Councilor Class Reference}
+\label{classInterface_1_1Councilor}\index{Interface::Councilor@{Interface::Councilor}}
+
+
+Implements cards that represent councilors Inherits from \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}.  
+
+
+
+
+{\ttfamily \#include $<$councilor.\+h$>$}
+
+Inheritance diagram for Interface\+::Councilor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1Councilor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1Councilor_a3a6c09be328622b2a6b7efd3a30c5e25}{Councilor}} (const QString \&\mbox{\hyperlink{classInterface_1_1Councilor_a0334e771ca6a60d5284189aa6d1b89fe}{name}}, const QString \&\mbox{\hyperlink{classInterface_1_1Councilor_a44581d21c71fbc02b7c215a4eacd2c9c}{title}}, std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_abcae2268d45b64b17559351943dcd1f6}{location}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1Councilor_af734563c79a428e7de4c48858ed72ddc}\label{classInterface_1_1Councilor_af734563c79a428e7de4c48858ed72ddc}} 
+virtual \mbox{\hyperlink{classInterface_1_1Councilor_af734563c79a428e7de4c48858ed72ddc}{$\sim$\+Councilor}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classInterface_1_1Councilor_ae4393abe384be028997ee53f598f9eaf}{type\+Name}} () const
+\begin{DoxyCompactList}\small\item\em returns the type of the card \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1Councilor_a0334e771ca6a60d5284189aa6d1b89fe}{name}} () const
+\begin{DoxyCompactList}\small\item\em getter for name \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInterface_1_1Councilor_a44581d21c71fbc02b7c215a4eacd2c9c}{title}} () const
+\begin{DoxyCompactList}\small\item\em getter for title \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_abcae2268d45b64b17559351943dcd1f6}{location}} () const
+\begin{DoxyCompactList}\small\item\em getter for location councilor is related to \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_a03e7b8d334702f3a8a3f3d1838b52246}{owner}} () const
+\begin{DoxyCompactList}\small\item\em which player owns this card \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Councilor_a55dc826e84415051a23dbdcaf95afadf}{set\+Owner}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_a03e7b8d334702f3a8a3f3d1838b52246}{owner}})
+\begin{DoxyCompactList}\small\item\em sets an owner to the card \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_ab9035a06b7121340f523f29d90f82fc7}{player}} () const
+\begin{DoxyCompactList}\small\item\em returns player, that has this councilor\textquotesingle{}s role in the game \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_af86dbad8499d31239bee70e6c3833f33}{player}} ()
+\begin{DoxyCompactList}\small\item\em returns player, that has this councilor\textquotesingle{}s role in the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_1_1Councilor_a1b85739ffd7d3576cdb79dddcf7db587}{set\+Player}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ \mbox{\hyperlink{classInterface_1_1Councilor_ab9035a06b7121340f523f29d90f82fc7}{player}})
+\begin{DoxyCompactList}\small\item\em sets a player to the role of this counsilor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements cards that represent councilors Inherits from \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}. 
+
+If class method is nothrow, \textquotesingle{}std\+:bad\+\_\+alloc\textquotesingle{} can still leak. (Out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1Councilor_a3a6c09be328622b2a6b7efd3a30c5e25}\label{classInterface_1_1Councilor_a3a6c09be328622b2a6b7efd3a30c5e25}} 
+\index{Interface::Councilor@{Interface::Councilor}!Councilor@{Councilor}}
+\index{Councilor@{Councilor}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{Councilor()}{Councilor()}}
+{\footnotesize\ttfamily Interface\+::\+Councilor\+::\+Councilor (\begin{DoxyParamCaption}\item[{const QString \&}]{name,  }\item[{const QString \&}]{title,  }\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+\begin{DoxyPrecond}{Precondition}
+location != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}}\textquotesingle{}s name \\
+\hline
+{\em title} & \mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}}\textquotesingle{}s title \\
+\hline
+{\em location} & of the board the councilor represents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classInterface_1_1Councilor}{Councilor}} has given name, title and location, and no owner or player 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Councilor_abcae2268d45b64b17559351943dcd1f6}\label{classInterface_1_1Councilor_abcae2268d45b64b17559351943dcd1f6}} 
+\index{Interface::Councilor@{Interface::Councilor}!location@{location}}
+\index{location@{location}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ Interface\+::\+Councilor\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+getter for location councilor is related to 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the location councilor is related to 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_abf1e60d7f43adacf09c2717d34fade23}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Councilor_a0334e771ca6a60d5284189aa6d1b89fe}\label{classInterface_1_1Councilor_a0334e771ca6a60d5284189aa6d1b89fe}} 
+\index{Interface::Councilor@{Interface::Councilor}!name@{name}}
+\index{name@{name}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily QString Interface\+::\+Councilor\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+getter for name 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+name of the councilor 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aeb0c3aeb4fa2311d46eb9e9f00c46d76}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Councilor_a03e7b8d334702f3a8a3f3d1838b52246}\label{classInterface_1_1Councilor_a03e7b8d334702f3a8a3f3d1838b52246}} 
+\index{Interface::Councilor@{Interface::Councilor}!owner@{owner}}
+\index{owner@{owner}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{owner()}{owner()}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Councilor\+::owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+which player owns this card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the owner, empty if unowned 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_aa1354642e1d7a65470ab531f3c245af7}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Councilor_af86dbad8499d31239bee70e6c3833f33}\label{classInterface_1_1Councilor_af86dbad8499d31239bee70e6c3833f33}} 
+\index{Interface::Councilor@{Interface::Councilor}!player@{player}}
+\index{player@{player}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Councilor\+::player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns player, that has this councilor\textquotesingle{}s role in the game 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+wea\+K\+\_\+ptr to the player 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Councilor_ab9035a06b7121340f523f29d90f82fc7}\label{classInterface_1_1Councilor_ab9035a06b7121340f523f29d90f82fc7}} 
+\index{Interface::Councilor@{Interface::Councilor}!player@{player}}
+\index{player@{player}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily weak\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$ Interface\+::\+Councilor\+::player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns player, that has this councilor\textquotesingle{}s role in the game 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+wea\+K\+\_\+ptr to the player 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Councilor_a55dc826e84415051a23dbdcaf95afadf}\label{classInterface_1_1Councilor_a55dc826e84415051a23dbdcaf95afadf}} 
+\index{Interface::Councilor@{Interface::Councilor}!setOwner@{setOwner}}
+\index{setOwner@{setOwner}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{setOwner()}{setOwner()}}
+{\footnotesize\ttfamily void Interface\+::\+Councilor\+::set\+Owner (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets an owner to the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & weak\+\_\+ptr to the cards\textquotesingle{} new owner, or empty if removed from possession \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+card has a new owner 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a4ea5b682171c6aa6267b34a74083a420}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Councilor_a1b85739ffd7d3576cdb79dddcf7db587}\label{classInterface_1_1Councilor_a1b85739ffd7d3576cdb79dddcf7db587}} 
+\index{Interface::Councilor@{Interface::Councilor}!setPlayer@{setPlayer}}
+\index{setPlayer@{setPlayer}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{setPlayer()}{setPlayer()}}
+{\footnotesize\ttfamily void Interface\+::\+Councilor\+::set\+Player (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Player}} $>$}]{player }\end{DoxyParamCaption})}
+
+
+
+sets a player to the role of this counsilor 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & weak\+\_\+ptr to the player to set or empty if role is left free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+player has been set to this councilor\textquotesingle{}s role 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Councilor_a44581d21c71fbc02b7c215a4eacd2c9c}\label{classInterface_1_1Councilor_a44581d21c71fbc02b7c215a4eacd2c9c}} 
+\index{Interface::Councilor@{Interface::Councilor}!title@{title}}
+\index{title@{title}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily QString Interface\+::\+Councilor\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+getter for title 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+title of the councilor 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a6eb68e14723995efab8a3020357fa033}{Interface\+::\+Card\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1Councilor_ae4393abe384be028997ee53f598f9eaf}\label{classInterface_1_1Councilor_ae4393abe384be028997ee53f598f9eaf}} 
+\index{Interface::Councilor@{Interface::Councilor}!typeName@{typeName}}
+\index{typeName@{typeName}!Interface::Councilor@{Interface::Councilor}}
+\doxysubsubsection{\texorpdfstring{typeName()}{typeName()}}
+{\footnotesize\ttfamily QString Interface\+::\+Councilor\+::type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the type of the card 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+card type as string 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1CardInterface_a9dd5a29dc868c20a87365123819159ca}{Interface\+::\+Card\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{councilor_8h}{councilor.\+h}}\item 
+councilor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+[
+    {
+        "id": "0",
+        "name": "Freljord",
+        "img": ":/map/freljord.jpg"
+    },
+    {
+        "id": "1",
+        "name": "Demacia",
+        "img": ":/map/demacia.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Noxus",
+        "img": ":/map/noxus.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Shurima",
+        "img": ":/map/shurima.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Targon Mount",
+        "img": ":/map/targonMount.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Bilgewater",
+        "img": ":/map/bilgewater.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Ionia",
+        "img": ":/map/ionia.jpg"
+    },
+    {
+        "id": "7",
+        "name": "Piltover and Zaun",
+        "img": ":/map/piltover&zaun.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Shadow Isles",
+        "img": ":/map/shadowIsles.jpg"
+    }
+]

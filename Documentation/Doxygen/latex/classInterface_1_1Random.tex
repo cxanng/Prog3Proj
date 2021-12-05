@@ -1,0 +1,86 @@
+\hypertarget{classInterface_1_1Random}{}\doxysection{Interface\+::Random Class Reference}
+\label{classInterface_1_1Random}\index{Interface::Random@{Interface::Random}}
+
+
+\mbox{\hyperlink{classInterface_1_1Random}{Random}} is a singleton class for random number generation.  
+
+
+
+
+{\ttfamily \#include $<$random.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1Random_a91528d9c34dc4e41f385a4b464c26e58}\label{classInterface_1_1Random_a91528d9c34dc4e41f385a4b464c26e58}} 
+\mbox{\hyperlink{classInterface_1_1Random_a91528d9c34dc4e41f385a4b464c26e58}{$\sim$\+Random}} ()=default
+\begin{DoxyCompactList}\small\item\em default deconstructor \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classInterface_1_1Random_a48dd7d7fcdeb2069f7ccb2e957a082aa}{uint}} (unsigned int max)
+\begin{DoxyCompactList}\small\item\em produces random uint valued between \mbox{[}0, max\mbox{]} \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classInterface_1_1Random_a284a9c9bbf0f3aea5ed6029fe189364a}{die}} ()
+\begin{DoxyCompactList}\small\item\em produces a result of a die roll\+: a number between \mbox{[}1, 6\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1Random_a38d3e259958855571379fb1a1bdfac12}\label{classInterface_1_1Random_a38d3e259958855571379fb1a1bdfac12}} 
+static \mbox{\hyperlink{classInterface_1_1Random}{Random}} \mbox{\hyperlink{classInterface_1_1Random_a38d3e259958855571379fb1a1bdfac12}{RANDOM}}
+\begin{DoxyCompactList}\small\item\em RANDOM singleton object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1Random}{Random}} is a singleton class for random number generation. 
+
+All random numbers used in the game should be generated through this class, so that the numbers won\textquotesingle{}t become predictable.
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (Out of memory) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1Random_a284a9c9bbf0f3aea5ed6029fe189364a}\label{classInterface_1_1Random_a284a9c9bbf0f3aea5ed6029fe189364a}} 
+\index{Interface::Random@{Interface::Random}!die@{die}}
+\index{die@{die}!Interface::Random@{Interface::Random}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily unsigned short Interface\+::\+Random\+::die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+produces a result of a die roll\+: a number between \mbox{[}1, 6\mbox{]} 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+a random number 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classInterface_1_1Random_a48dd7d7fcdeb2069f7ccb2e957a082aa}\label{classInterface_1_1Random_a48dd7d7fcdeb2069f7ccb2e957a082aa}} 
+\index{Interface::Random@{Interface::Random}!uint@{uint}}
+\index{uint@{uint}!Interface::Random@{Interface::Random}}
+\doxysubsubsection{\texorpdfstring{uint()}{uint()}}
+{\footnotesize\ttfamily unsigned int Interface\+::\+Random\+::uint (\begin{DoxyParamCaption}\item[{unsigned int}]{max }\end{DoxyParamCaption})}
+
+
+
+produces random uint valued between \mbox{[}0, max\mbox{]} 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em max} & number generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random number 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{random_8h}{random.\+h}}\item 
+random.\+cpp\end{DoxyCompactItemize}

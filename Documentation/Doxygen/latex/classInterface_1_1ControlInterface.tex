@@ -1,0 +1,71 @@
+\hypertarget{classInterface_1_1ControlInterface}{}\doxysection{Interface\+::Control\+Interface Class Reference}
+\label{classInterface_1_1ControlInterface}\index{Interface::ControlInterface@{Interface::ControlInterface}}
+
+
+\mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} defines an interface for the object which does actions.  
+
+
+
+
+{\ttfamily \#include $<$controlinterface.\+h$>$}
+
+Inheritance diagram for Interface\+::Control\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1ControlInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterface_1_1ControlInterface_abbe5e7e5b8ce8eafdd3e8852d086fd23}\label{classInterface_1_1ControlInterface_abbe5e7e5b8ce8eafdd3e8852d086fd23}} 
+\mbox{\hyperlink{classInterface_1_1ControlInterface_abbe5e7e5b8ce8eafdd3e8852d086fd23}{Control\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor, exists for doc purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1ControlInterface_aa66318b54d1191be08445477c125e64a}\label{classInterface_1_1ControlInterface_aa66318b54d1191be08445477c125e64a}} 
+virtual \mbox{\hyperlink{classInterface_1_1ControlInterface_aa66318b54d1191be08445477c125e64a}{$\sim$\+Control\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual deconstructor, exists because interface classes should always have one. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1ControlInterface_a1e872051e9c70592929a2f2df6c7ee01}{next\+Action}} ()=0
+\begin{DoxyCompactList}\small\item\em Tells what is the next action to do. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInterface_1_1ControlInterface}{Control\+Interface}} defines an interface for the object which does actions. 
+
+Interface describes objects that take actions, such as player or AI.
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (Out of memory) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1ControlInterface_a1e872051e9c70592929a2f2df6c7ee01}\label{classInterface_1_1ControlInterface_a1e872051e9c70592929a2f2df6c7ee01}} 
+\index{Interface::ControlInterface@{Interface::ControlInterface}!nextAction@{nextAction}}
+\index{nextAction@{nextAction}!Interface::ControlInterface@{Interface::ControlInterface}}
+\doxysubsubsection{\texorpdfstring{nextAction()}{nextAction()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classInterface_1_1ActionInterface}{Action\+Interface}}$>$ Interface\+::\+Control\+Interface\+::next\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Tells what is the next action to do. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the next action, or empty if action can\textquotesingle{}t be procured 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: minimal 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1ControlException}{Control\+Exception}}} & when error happened while defining the next action \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classInterface_1_1ManualControl_aa6875139ccf82a8e8e6a8c7e2cddca5c}{Interface\+::\+Manual\+Control}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{controlinterface_8h}{controlinterface.\+h}}\end{DoxyCompactItemize}

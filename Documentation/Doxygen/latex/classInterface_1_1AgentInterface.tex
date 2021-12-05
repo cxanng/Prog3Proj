@@ -1,0 +1,231 @@
+\hypertarget{classInterface_1_1AgentInterface}{}\doxysection{Interface\+::Agent\+Interface Class Reference}
+\label{classInterface_1_1AgentInterface}\index{Interface::AgentInterface@{Interface::AgentInterface}}
+
+
+defines the interface for agent cards.  
+
+
+
+
+{\ttfamily \#include $<$agentinterface.\+h$>$}
+
+Inheritance diagram for Interface\+::Agent\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classInterface_1_1AgentInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1AgentInterface_a33f71adb30f31c67a23c42f9523819c8}{Agent\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Exists for doc purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_affbfe9800fdd3a7308577484da36068c}\label{classInterface_1_1AgentInterface_affbfe9800fdd3a7308577484da36068c}} 
+virtual \mbox{\hyperlink{classInterface_1_1AgentInterface_affbfe9800fdd3a7308577484da36068c}{$\sim$\+Agent\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor. Exists, because baseclass should always have one. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1AgentInterface_a455074656be632013504401fbb42f0d6}{is\+Common}} () const =0
+\begin{DoxyCompactList}\small\item\em tells if this is a common/\char`\"{}generic\char`\"{} agent with no relation to any location \end{DoxyCompactList}\item 
+virtual std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1AgentInterface_a98a6384843224dffd590cdcaf018ec9c}{placement}} () const =0
+\begin{DoxyCompactList}\small\item\em return info about the agent\textquotesingle{}s placement \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1AgentInterface_abc7e9c0d072f315a4741df12deeb4955}{set\+Placement}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$ \mbox{\hyperlink{classInterface_1_1AgentInterface_a98a6384843224dffd590cdcaf018ec9c}{placement}})=0
+\begin{DoxyCompactList}\small\item\em tell agent its location \end{DoxyCompactList}\item 
+virtual unsigned short \mbox{\hyperlink{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}{connections}} () const =0
+\begin{DoxyCompactList}\small\item\em tells about the current state of connections \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1AgentInterface_ac5e1f6991b3fce989d925183cdd6bc9b}{set\+Connections}} (unsigned short \mbox{\hyperlink{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}{connections}})=0
+\begin{DoxyCompactList}\small\item\em sets the level of connections \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1AgentInterface_a62b5e692d9145d6099d9d324946a16b7}{modify\+Connections}} (short change)=0
+\begin{DoxyCompactList}\small\item\em changes the level of connections \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+defines the interface for agent cards. 
+
+\mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} inherits from \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}, meaning that to implement this interface, one must also implement cardinterface.
+
+If class method is not nothrow, it can leak \textquotesingle{}std\+:bad\+\_\+alloc\textquotesingle{} ( out of memory ). \begin{DoxyInvariant}{Invariant}
+if placement.\+lock() != nullptr, then \mbox{\hyperlink{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}{connections()}} $>$ 0 . In other words\+: if agent is on a location on board, it has connections. 
+\end{DoxyInvariant}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_a33f71adb30f31c67a23c42f9523819c8}\label{classInterface_1_1AgentInterface_a33f71adb30f31c67a23c42f9523819c8}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!AgentInterface@{AgentInterface}}
+\index{AgentInterface@{AgentInterface}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{AgentInterface()}{AgentInterface()}}
+{\footnotesize\ttfamily Interface\+::\+Agent\+Interface\+::\+Agent\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. Exists for doc purposes. 
+
+\begin{DoxyPostcond}{Postcondition}
+Agent is not in a location and in doesn\textquotesingle{}t have any connections. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}\label{classInterface_1_1AgentInterface_acc042fa81667ccce65b60f880b216516}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!connections@{connections}}
+\index{connections@{connections}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{connections()}{connections()}}
+{\footnotesize\ttfamily virtual unsigned short Interface\+::\+Agent\+Interface\+::connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tells about the current state of connections 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+current level of connections 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_aebd84c3c41899c43b066c070271c36ee}{Card\+Model\+::\+Agent}}.
+
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_a455074656be632013504401fbb42f0d6}\label{classInterface_1_1AgentInterface_a455074656be632013504401fbb42f0d6}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!isCommon@{isCommon}}
+\index{isCommon@{isCommon}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{isCommon()}{isCommon()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+Agent\+Interface\+::is\+Common (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tells if this is a common/\char`\"{}generic\char`\"{} agent with no relation to any location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if generic 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_afdeb0984a038ed43e94cfdb87c889c4d}{Card\+Model\+::\+Agent}}.
+
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_a62b5e692d9145d6099d9d324946a16b7}\label{classInterface_1_1AgentInterface_a62b5e692d9145d6099d9d324946a16b7}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!modifyConnections@{modifyConnections}}
+\index{modifyConnections@{modifyConnections}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{modifyConnections()}{modifyConnections()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Agent\+Interface\+::modify\+Connections (\begin{DoxyParamCaption}\item[{short}]{change }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+changes the level of connections 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em change} & the amount to change \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+connection level has been modified according to param 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1StateException}{State\+Exception}}} & if invariant would be broken \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_ad882d523b6f25cf6e5c8d55bc5b0aa29}{Card\+Model\+::\+Agent}}.
+
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_a98a6384843224dffd590cdcaf018ec9c}\label{classInterface_1_1AgentInterface_a98a6384843224dffd590cdcaf018ec9c}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!placement@{placement}}
+\index{placement@{placement}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{placement()}{placement()}}
+{\footnotesize\ttfamily virtual std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classInterface_1_1Location}{Location}}$>$ Interface\+::\+Agent\+Interface\+::placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+return info about the agent\textquotesingle{}s placement 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+weak\+\_\+ptr to the location agent is in, or empty ptr if not on board 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_ace6fed55a09115b162bbbd136c227ab0}{Card\+Model\+::\+Agent}}.
+
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_ac5e1f6991b3fce989d925183cdd6bc9b}\label{classInterface_1_1AgentInterface_ac5e1f6991b3fce989d925183cdd6bc9b}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!setConnections@{setConnections}}
+\index{setConnections@{setConnections}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{setConnections()}{setConnections()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Agent\+Interface\+::set\+Connections (\begin{DoxyParamCaption}\item[{unsigned short}]{connections }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sets the level of connections 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em connections} & is the new level of connections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+connections are set according to the params 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classInterface_1_1StateException}{State\+Exception}}} & if invariant would be broken \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_aabcbb8e9eb4601c3dd37f9df20a7fc98}{Card\+Model\+::\+Agent}}.
+
+\mbox{\Hypertarget{classInterface_1_1AgentInterface_abc7e9c0d072f315a4741df12deeb4955}\label{classInterface_1_1AgentInterface_abc7e9c0d072f315a4741df12deeb4955}} 
+\index{Interface::AgentInterface@{Interface::AgentInterface}!setPlacement@{setPlacement}}
+\index{setPlacement@{setPlacement}!Interface::AgentInterface@{Interface::AgentInterface}}
+\doxysubsubsection{\texorpdfstring{setPlacement()}{setPlacement()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Agent\+Interface\+::set\+Placement (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Location}} $>$}]{placement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tell agent its location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em placement} & location, or empty ptr if not on board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+agent knows its location 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCardModel_1_1Agent_a1d16c827601f5c0e38f8e57cd0b90b84}{Card\+Model\+::\+Agent}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{agentinterface_8h}{agentinterface.\+h}}\end{DoxyCompactItemize}

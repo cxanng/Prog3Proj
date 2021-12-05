@@ -1,0 +1,112 @@
+\hypertarget{classInterface_1_1WithdrawAction}{}\doxysection{Interface\+::Withdraw\+Action Class Reference}
+\label{classInterface_1_1WithdrawAction}\index{Interface::WithdrawAction@{Interface::WithdrawAction}}
+
+
+action withdraws an agent from the board  
+
+
+
+
+{\ttfamily \#include $<$withdrawaction.\+h$>$}
+
+Inheritance diagram for Interface\+::Withdraw\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1WithdrawAction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1WithdrawAction_a974778c67ebbc28f47356d8eab5ac212}{Withdraw\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$ agent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1WithdrawAction_acde19936925c11f4edfeb7d8df436a64}\label{classInterface_1_1WithdrawAction_acde19936925c11f4edfeb7d8df436a64}} 
+virtual \mbox{\hyperlink{classInterface_1_1WithdrawAction_acde19936925c11f4edfeb7d8df436a64}{$\sim$\+Withdraw\+Action}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1WithdrawAction_a17957289387964cad0a51d517af70e44}{can\+Perform}} () const
+\begin{DoxyCompactList}\small\item\em checks if the agent can withdraw \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1WithdrawAction_a266e4d4dae10c0ced008f1ad65da66d5}{perform}} ()
+\begin{DoxyCompactList}\small\item\em performs the withdraw action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+action withdraws an agent from the board 
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can always leak. (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1WithdrawAction_a974778c67ebbc28f47356d8eab5ac212}\label{classInterface_1_1WithdrawAction_a974778c67ebbc28f47356d8eab5ac212}} 
+\index{Interface::WithdrawAction@{Interface::WithdrawAction}!WithdrawAction@{WithdrawAction}}
+\index{WithdrawAction@{WithdrawAction}!Interface::WithdrawAction@{Interface::WithdrawAction}}
+\doxysubsubsection{\texorpdfstring{WithdrawAction()}{WithdrawAction()}}
+{\footnotesize\ttfamily Interface\+::\+Withdraw\+Action\+::\+Withdraw\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Agent\+Interface}} $>$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & shared\+\_\+ptr to the agent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Withdraw action created for the agent 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1WithdrawAction_a17957289387964cad0a51d517af70e44}\label{classInterface_1_1WithdrawAction_a17957289387964cad0a51d517af70e44}} 
+\index{Interface::WithdrawAction@{Interface::WithdrawAction}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Interface::WithdrawAction@{Interface::WithdrawAction}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily bool Interface\+::\+Withdraw\+Action\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+checks if the agent can withdraw 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if agent is on board 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{Interface\+::\+Action\+Interface}}.
+
+\mbox{\Hypertarget{classInterface_1_1WithdrawAction_a266e4d4dae10c0ced008f1ad65da66d5}\label{classInterface_1_1WithdrawAction_a266e4d4dae10c0ced008f1ad65da66d5}} 
+\index{Interface::WithdrawAction@{Interface::WithdrawAction}!perform@{perform}}
+\index{perform@{perform}!Interface::WithdrawAction@{Interface::WithdrawAction}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Interface\+::\+Withdraw\+Action\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+performs the withdraw action 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+agent has been withdrawn from the board and returned to owner\textquotesingle{}s hand 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{Interface\+::\+Action\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{withdrawaction_8h}{withdrawaction.\+h}}\item 
+withdrawaction.\+cpp\end{DoxyCompactItemize}

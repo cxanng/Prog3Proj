@@ -1,0 +1,14 @@
+Hello players!
+The ultimate boss of Runeterra, who subjugate all nine realms, has been slain. Now the nine realms are brought to chaos. Now it is your time to conquer the realms and bring back the peace for all Runeterra. You will have your Agents to help you gain Influence on the location's Councilors. 
+Instruction:
+- Choose a location to start conquering
+- Send an agent to location to perform various actions
+- Shuffle and draw action will lift a card from the location's deck to your hand
+- Own the location when your influence on the location is high enough
+- Withdraw agent will lift the agent you sent previously to the location to your hand
+Each player has 1 agent card at the beginning and can gain more agents while drawing or owning an area (up to 7 agents max at a time).
+
+Have a great time conquering Runeterra.
+
+Creator: Nhi Tran   H291937
+         Anh Nguyen H292126

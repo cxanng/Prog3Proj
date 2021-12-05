@@ -1,0 +1,128 @@
+[
+    {
+        "location_id": "0",
+        "typename": "Councilor",
+        "name": "Ashe",
+        "title": "Councilor of Freljord",
+        "img": ":/cards/councilor-Ashe.jpg"
+    },
+    {
+        "location_id": "1",
+        "typename": "Councilor",
+        "name": "Garen",
+        "title": "Councilor of Demacia",
+        "img": ":/cards/councilor-Garen.jpg"
+    },
+    {
+        "location_id": "2",
+        "typename": "Councilor",
+        "name": "Darius",
+        "title": "Councilor of Noxus",
+        "img": ":/cards/councilor-Darius.jpg"
+    },
+    {
+        "location_id": "3",
+        "typename": "Councilor",
+        "name": "Azir",
+        "title": "Councilor of Shurima",
+        "img": ":/cards/councilor-Azir.jpg"
+    },
+    {
+        "location_id": "4",
+        "typename": "Councilor",
+        "name": "Taric",
+        "title": "Councilor of Targon Mount",
+        "img": ":/cards/councilor-Taric.jpg"
+    },
+    {
+        "location_id": "5",
+        "typename": "Councilor",
+        "name": "Gankplank",
+        "title": "Councilor of Bilgewater",
+        "img": ":/cards/councilor-Gankplank.jpg"
+    },
+    {
+        "location_id": "6",
+        "typename": "Councilor",
+        "name": "Karma",
+        "title": "Councilor of Ionia",
+        "img": ":/cards/councilor-Karma.jpg"
+    },
+    {
+        "location_id": "7",
+        "typename": "Councilor",
+        "name": "Caitlyn",
+        "title": "Councilor of Piltover and Zaun",
+        "img": ":/cards/councilor-Caitlyn.jpg"
+    },
+    {
+        "location_id": "8",
+        "typename": "Councilor",
+        "name": "Viego",
+        "title": "Councilor of Shadow Isles",
+        "img": ":/cards/councilor-Viego.jpg"
+    },
+    {
+        "location_id": "0",
+        "typename": "Agent",
+        "name": "Anivia",
+        "title": "Agent Anivia",
+        "img": ":/cards/agent-Anivia.png"
+    },
+    {
+        "location_id": "1",
+        "typename": "Agent",
+        "name": "Lux",
+        "title": "Agent Lux",
+        "img": ":/cards/agent-Lux.png"
+    },
+    {
+        "location_id": "2",
+        "typename": "Agent",
+        "name": "Draven",
+        "title": "Agent Draven",
+        "img": ":/cards/agent-Draven.png"
+    },
+    {
+        "location_id": "3",
+        "typename": "Agent",
+        "name": "Nasus",
+        "title": "Agent Nasus",
+        "img": ":/cards/agent-Nasus.png"
+    },
+    {
+        "location_id": "4",
+        "typename": "Agent",
+        "name": "Tyari",
+        "title": "Agent Tyari",
+        "img": ":/cards/agent-Tyari.jpg"
+    },
+    {
+        "location_id": "5",
+        "typename": "Agent",
+        "name": "Nautilus",
+        "title": "Agent Nautilus",
+        "img": ":/cards/agent-Nautilus.png"
+    },
+    {
+        "location_id": "6",
+        "typename": "Agent",
+        "name": "Lulu",
+        "title": "Agent Lulu",
+        "img": ":/cards/agent-Lulu.png"
+    },
+    {
+        "location_id": "7",
+        "typename": "Agent",
+        "name": "Teemo",
+        "title": "Agent Teemo",
+        "img": ":/cards/agent-Teemo.png"
+    },
+    {
+        "location_id": "8",
+        "typename": "Agent",
+        "name": "Thresh",
+        "title": "Agent Thresh",
+        "img": ":/cards/agent-Thresh.jpg"
+    }
+]

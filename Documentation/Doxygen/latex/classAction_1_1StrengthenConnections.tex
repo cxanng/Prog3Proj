@@ -1,0 +1,110 @@
+\hypertarget{classAction_1_1StrengthenConnections}{}\doxysection{Action\+::Strengthen\+Connections Class Reference}
+\label{classAction_1_1StrengthenConnections}\index{Action::StrengthenConnections@{Action::StrengthenConnections}}
+
+
+action strengthens connections of an agent  
+
+
+
+
+{\ttfamily \#include $<$strengthenconnections.\+h$>$}
+
+Inheritance diagram for Action\+::Strengthen\+Connections\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAction_1_1StrengthenConnections}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAction_1_1StrengthenConnections_a221fce599fe760420cf312524cdef2e6}{Strengthen\+Connections}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Interface\+::\+Agent\+Interface}} $>$ agent, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$ cur\+Loc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAction_1_1StrengthenConnections}{Strengthen\+Connections}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAction_1_1StrengthenConnections_afc98c0e61f0ab226f513c39879ae3185}\label{classAction_1_1StrengthenConnections_afc98c0e61f0ab226f513c39879ae3185}} 
+virtual \mbox{\hyperlink{classAction_1_1StrengthenConnections_afc98c0e61f0ab226f513c39879ae3185}{$\sim$\+Strengthen\+Connections}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAction_1_1StrengthenConnections_ade387362a99ec81b9ce9d56d55a09a72}{can\+Perform}} () const
+\begin{DoxyCompactList}\small\item\em can\+Perform check if the agent is sent to some location \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAction_1_1StrengthenConnections_a5f76f0518841464ca0a274672a5f5bd6}{perform}} ()
+\begin{DoxyCompactList}\small\item\em perform \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+action strengthens connections of an agent 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAction_1_1StrengthenConnections_a221fce599fe760420cf312524cdef2e6}\label{classAction_1_1StrengthenConnections_a221fce599fe760420cf312524cdef2e6}} 
+\index{Action::StrengthenConnections@{Action::StrengthenConnections}!StrengthenConnections@{StrengthenConnections}}
+\index{StrengthenConnections@{StrengthenConnections}!Action::StrengthenConnections@{Action::StrengthenConnections}}
+\doxysubsubsection{\texorpdfstring{StrengthenConnections()}{StrengthenConnections()}}
+{\footnotesize\ttfamily Action\+::\+Strengthen\+Connections\+::\+Strengthen\+Connections (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Interface\+::\+Agent\+Interface}} $>$}]{agent,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$}]{cur\+Loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classAction_1_1StrengthenConnections}{Strengthen\+Connections}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent,share} & pointer to the agent to strengthen connections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Strengthen action created for the agent 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAction_1_1StrengthenConnections_ade387362a99ec81b9ce9d56d55a09a72}\label{classAction_1_1StrengthenConnections_ade387362a99ec81b9ce9d56d55a09a72}} 
+\index{Action::StrengthenConnections@{Action::StrengthenConnections}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Action::StrengthenConnections@{Action::StrengthenConnections}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily bool Action\+::\+Strengthen\+Connections\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+can\+Perform check if the agent is sent to some location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true if the agent is being sent to some location 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{Interface\+::\+Action\+Interface}}.
+
+\mbox{\Hypertarget{classAction_1_1StrengthenConnections_a5f76f0518841464ca0a274672a5f5bd6}\label{classAction_1_1StrengthenConnections_a5f76f0518841464ca0a274672a5f5bd6}} 
+\index{Action::StrengthenConnections@{Action::StrengthenConnections}!perform@{perform}}
+\index{perform@{perform}!Action::StrengthenConnections@{Action::StrengthenConnections}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Action\+::\+Strengthen\+Connections\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+perform 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+connections of the agent is strengthened 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{Interface\+::\+Action\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{strengthenconnections_8h}{strengthenconnections.\+h}}\item 
+strengthenconnections.\+cpp\end{DoxyCompactItemize}

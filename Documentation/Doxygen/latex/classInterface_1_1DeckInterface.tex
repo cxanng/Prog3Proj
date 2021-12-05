@@ -1,0 +1,321 @@
+\hypertarget{classInterface_1_1DeckInterface}{}\doxysection{Interface\+::Deck\+Interface Class Reference}
+\label{classInterface_1_1DeckInterface}\index{Interface::DeckInterface@{Interface::DeckInterface}}
+
+
+interface for calsses that represent carddecks.  
+
+
+
+
+{\ttfamily \#include $<$deckinterface.\+h$>$}
+
+Inheritance diagram for Interface\+::Deck\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInterface_1_1DeckInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_1_1DeckInterface_ae893b6e7209eb8afdb003a1947f94406}{Deck\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor, exists for doc purposes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_ac2e7e7169d48ae009da2111520fc4c45}\label{classInterface_1_1DeckInterface_ac2e7e7169d48ae009da2111520fc4c45}} 
+virtual \mbox{\hyperlink{classInterface_1_1DeckInterface_ac2e7e7169d48ae009da2111520fc4c45}{$\sim$\+Deck\+Interface}} ()=default
+\begin{DoxyCompactList}\small\item\em defalt virtual constructor, exists because interface classes should always have one \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classInterface_1_1DeckInterface_a8f233c193267963ac128e87c7486943a}{size}} () const =0
+\begin{DoxyCompactList}\small\item\em returns the size of the deck \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1DeckInterface_a6273aaf9aa4a5ff495bfc0666a66b16f}{card\+At}} (unsigned int i) const =0
+\begin{DoxyCompactList}\small\item\em returns a card from the deck \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1DeckInterface_a2c0dfcbe4c1f91674eef1ab085a6efad}{card\+At}} (unsigned int i)=0
+\begin{DoxyCompactList}\small\item\em returns a card from the deck \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1DeckInterface_a231b98db1c69f6670f0e9fa62deca7f5}{can\+Draw}} () const =0
+\begin{DoxyCompactList}\small\item\em can a card be drawn \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classInterface_1_1DeckInterface_a7ad4a119eeb957eec19c800abdd0efca}{visible}} () const =0
+\begin{DoxyCompactList}\small\item\em tells which way the cards are facing in the deck \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1DeckInterface_a666c6ebc16c5e741a8184eb5501e8de6}{add\+Card}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ card, bool to\+Bottom=false)=0
+\begin{DoxyCompactList}\small\item\em adds a card to the deck \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1DeckInterface_afbb558a70db405e25eed11015896c3ed}{draw}} ()=0
+\begin{DoxyCompactList}\small\item\em draw a card from this deck \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1DeckInterface_a6de1f8a98b5ff06d6633759b49d67ed4}{peek}} () const =0
+\begin{DoxyCompactList}\small\item\em peek the topmost card \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$ \mbox{\hyperlink{classInterface_1_1DeckInterface_add7e6fac6b341b0514cb75301ed59998}{peek}} ()=0
+\begin{DoxyCompactList}\small\item\em peek the topmost card \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInterface_1_1DeckInterface_adb082e0dac0a7c237d9fdc1ec544f931}{shuffle}} ()=0
+\begin{DoxyCompactList}\small\item\em shuffle this deck \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+interface for calsses that represent carddecks. 
+
+If class method is not nothrow, \textquotesingle{}std\+::bad\+\_\+alloc\textquotesingle{} can alwasys leak. (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_ae893b6e7209eb8afdb003a1947f94406}\label{classInterface_1_1DeckInterface_ae893b6e7209eb8afdb003a1947f94406}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!DeckInterface@{DeckInterface}}
+\index{DeckInterface@{DeckInterface}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{DeckInterface()}{DeckInterface()}}
+{\footnotesize\ttfamily Interface\+::\+Deck\+Interface\+::\+Deck\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default constructor, exists for doc purposes 
+
+\begin{DoxyPostcond}{Postcondition}
+Deck is empty 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a666c6ebc16c5e741a8184eb5501e8de6}\label{classInterface_1_1DeckInterface_a666c6ebc16c5e741a8184eb5501e8de6}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!addCard@{addCard}}
+\index{addCard@{addCard}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{addCard()}{addCard()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Deck\+Interface\+::add\+Card (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}} $>$}]{card,  }\item[{bool}]{to\+Bottom = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+adds a card to the deck 
+
+\begin{DoxyPrecond}{Precondition}
+card != nullptr, card is not on board, in any other deck or in someones hand 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em card} & to add \\
+\hline
+{\em to\+Bottom} & where to add the card, default is false, which adds card to the top \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+card has been added to this deck 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_a16f4a048c125cbcf29243b0fce51b9db}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a231b98db1c69f6670f0e9fa62deca7f5}\label{classInterface_1_1DeckInterface_a231b98db1c69f6670f0e9fa62deca7f5}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!canDraw@{canDraw}}
+\index{canDraw@{canDraw}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{canDraw()}{canDraw()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+Deck\+Interface\+::can\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+can a card be drawn 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if atleast a single card can be drawn 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_a5c21efcda536269ba87daadf5e2f9c60}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a6273aaf9aa4a5ff495bfc0666a66b16f}\label{classInterface_1_1DeckInterface_a6273aaf9aa4a5ff495bfc0666a66b16f}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!cardAt@{cardAt}}
+\index{cardAt@{cardAt}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{cardAt()}{cardAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}$>$ Interface\+::\+Deck\+Interface\+::card\+At (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns a card from the deck 
+
+\begin{DoxyPrecond}{Precondition}
+0 $<$= i $<$ deck size 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & cards location in deck, 0 is the lowest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to card at i 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_a59f36c7b333dc807ed97382646de1dd2}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a2c0dfcbe4c1f91674eef1ab085a6efad}\label{classInterface_1_1DeckInterface_a2c0dfcbe4c1f91674eef1ab085a6efad}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!cardAt@{cardAt}}
+\index{cardAt@{cardAt}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{cardAt()}{cardAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}$>$ Interface\+::\+Deck\+Interface\+::card\+At (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns a card from the deck 
+
+\begin{DoxyPrecond}{Precondition}
+0 $<$= i $<$ deck size 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & cards location in deck, 0 is the lowest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to card at i 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_abb6a1e56f7357b3a2061fea7a72b8707}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_afbb558a70db405e25eed11015896c3ed}\label{classInterface_1_1DeckInterface_afbb558a70db405e25eed11015896c3ed}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!draw@{draw}}
+\index{draw@{draw}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}$>$ Interface\+::\+Deck\+Interface\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+draw a card from this deck 
+
+\begin{DoxyPrecond}{Precondition}
+a card can be drawn 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the drawn card 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+card has been removed from this deck 
+
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_a786549395ba52de3c924f5dce010a7f0}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a6de1f8a98b5ff06d6633759b49d67ed4}\label{classInterface_1_1DeckInterface_a6de1f8a98b5ff06d6633759b49d67ed4}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!peek@{peek}}
+\index{peek@{peek}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}$>$ Interface\+::\+Deck\+Interface\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+peek the topmost card 
+
+\begin{DoxyPrecond}{Precondition}
+deck has atleast one card 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the topmost card 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_af9a5c64d1a44228dc1e9350286559cae}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_add7e6fac6b341b0514cb75301ed59998}\label{classInterface_1_1DeckInterface_add7e6fac6b341b0514cb75301ed59998}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!peek@{peek}}
+\index{peek@{peek}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classInterface_1_1CardInterface}{Card\+Interface}}$>$ Interface\+::\+Deck\+Interface\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+peek the topmost card 
+
+\begin{DoxyPrecond}{Precondition}
+deck has atleast one card 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr to the topmost card 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_aa3b2a31a61e3e26077ed938292ac6621}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_adb082e0dac0a7c237d9fdc1ec544f931}\label{classInterface_1_1DeckInterface_adb082e0dac0a7c237d9fdc1ec544f931}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+Deck\+Interface\+::shuffle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+shuffle this deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+cards are in randomized order 
+
+exception guarantee\+: basic 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_a344973fc409c9fcd57b2ce84fba62a2e}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a8f233c193267963ac128e87c7486943a}\label{classInterface_1_1DeckInterface_a8f233c193267963ac128e87c7486943a}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!size@{size}}
+\index{size@{size}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily virtual unsigned int Interface\+::\+Deck\+Interface\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns the size of the deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+deck\textquotesingle{}s size 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_aa88fa52c2f483bcfbe757da4bebb6eb7}{Course\+::\+Deck}}.
+
+\mbox{\Hypertarget{classInterface_1_1DeckInterface_a7ad4a119eeb957eec19c800abdd0efca}\label{classInterface_1_1DeckInterface_a7ad4a119eeb957eec19c800abdd0efca}} 
+\index{Interface::DeckInterface@{Interface::DeckInterface}!visible@{visible}}
+\index{visible@{visible}!Interface::DeckInterface@{Interface::DeckInterface}}
+\doxysubsubsection{\texorpdfstring{visible()}{visible()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+Deck\+Interface\+::visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tells which way the cards are facing in the deck 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true, if cards are facing up 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{classCourse_1_1Deck_afebd2a9c86bf76d14c1bd7485b832623}{Course\+::\+Deck}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{deckinterface_8h}{deckinterface.\+h}}\end{DoxyCompactItemize}

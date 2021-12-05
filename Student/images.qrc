@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>map/runeterra_map</file>
+        <file>cards/councilor-Viego.jpg</file>
+        <file>cards/councilor-Taric.jpg</file>
+        <file>cards/councilor-Karma.jpg</file>
+        <file>cards/councilor-Garen.jpg</file>
+        <file>cards/councilor-Gankplank.jpg</file>
+        <file>cards/councilor-Darius.jpg</file>
+        <file>cards/councilor-Caitlyn.jpg</file>
+        <file>cards/councilor-Azir.jpg</file>
+        <file>cards/councilor-Ashe.jpg</file>
+        <file>map/shadowIsles.jpg</file>
+        <file>map/piltover&amp;zaun.jpg</file>
+        <file>map/ionia.jpg</file>
+        <file>map/bilgewater.jpg</file>
+        <file>map/targonMount.jpg</file>
+        <file>map/shurima.jpg</file>
+        <file>map/noxus.jpg</file>
+        <file>map/demacia.jpg</file>
+        <file>map/freljord.jpg</file>
+        <file>cards/influence-bfSword-70.png</file>
+        <file>cards/influence-doranBlade-10.png</file>
+        <file>cards/influence-doranRing-20.png</file>
+        <file>cards/influence-immortalShieldbow-90.png</file>
+        <file>cards/influence-infinityEdge-100.png</file>
+        <file>cards/influence-moonstoneRenewer-40.png</file>
+        <file>cards/influence-oblivionOrb-30.png</file>
+        <file>cards/influence-spiritVisage-80.png</file>
+        <file>cards/influence-thornmail-50.png</file>
+        <file>cards/influence-zhonyaHourglass-60.png</file>
+        <file>cards/agent-Tyari.jpg</file>
+        <file>cards/agent-Thresh.jpg</file>
+        <file>cards/agent-Teemo.png</file>
+        <file>cards/agent-player-4.png</file>
+        <file>cards/agent-player-3.png</file>
+        <file>cards/agent-player-2.png</file>
+        <file>cards/agent-player-1.png</file>
+        <file>cards/agent-Nautilus.png</file>
+        <file>cards/agent-Nasus.png</file>
+        <file>cards/agent-Lux.png</file>
+        <file>cards/agent-Lulu.png</file>
+        <file>cards/agent-Draven.png</file>
+        <file>cards/agent-Anivia.png</file>
+    </qresource>
+</RCC>

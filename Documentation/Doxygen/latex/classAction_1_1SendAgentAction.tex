@@ -1,0 +1,109 @@
+\hypertarget{classAction_1_1SendAgentAction}{}\doxysection{Action\+::Send\+Agent\+Action Class Reference}
+\label{classAction_1_1SendAgentAction}\index{Action::SendAgentAction@{Action::SendAgentAction}}
+
+
+Action sends an agent to a location.  
+
+
+
+
+{\ttfamily \#include $<$sendagentaction.\+h$>$}
+
+Inheritance diagram for Action\+::Send\+Agent\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAction_1_1SendAgentAction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAction_1_1SendAgentAction_adf6310bd67417cb36c9b614696fd8d1c}{Send\+Agent\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Interface\+::\+Agent\+Interface}} $>$ agent, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$ target\+Loc)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAction_1_1SendAgentAction_a9b766afb04165bd5ca880bfd2f7e566f}\label{classAction_1_1SendAgentAction_a9b766afb04165bd5ca880bfd2f7e566f}} 
+virtual \mbox{\hyperlink{classAction_1_1SendAgentAction_a9b766afb04165bd5ca880bfd2f7e566f}{$\sim$\+Send\+Agent\+Action}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAction_1_1SendAgentAction_ab19691361237bead75faad6b7183ba45}{can\+Perform}} () const
+\begin{DoxyCompactList}\small\item\em check if the agent can be sent to location \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAction_1_1SendAgentAction_a1d5bb8eae193c5dac94392329ba812bb}{perform}} ()
+\begin{DoxyCompactList}\small\item\em performs the send agent action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Action sends an agent to a location. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAction_1_1SendAgentAction_adf6310bd67417cb36c9b614696fd8d1c}\label{classAction_1_1SendAgentAction_adf6310bd67417cb36c9b614696fd8d1c}} 
+\index{Action::SendAgentAction@{Action::SendAgentAction}!SendAgentAction@{SendAgentAction}}
+\index{SendAgentAction@{SendAgentAction}!Action::SendAgentAction@{Action::SendAgentAction}}
+\doxysubsubsection{\texorpdfstring{SendAgentAction()}{SendAgentAction()}}
+{\footnotesize\ttfamily Action\+::\+Send\+Agent\+Action\+::\+Send\+Agent\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1AgentInterface}{Interface\+::\+Agent\+Interface}} $>$}]{agent,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$}]{target\+Loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & shared\+\_\+ptr to the agent \\
+\hline
+{\em target\+Loc} & shared\+\_\+ptr to the target location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Send agent action created for the agent 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAction_1_1SendAgentAction_ab19691361237bead75faad6b7183ba45}\label{classAction_1_1SendAgentAction_ab19691361237bead75faad6b7183ba45}} 
+\index{Action::SendAgentAction@{Action::SendAgentAction}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Action::SendAgentAction@{Action::SendAgentAction}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily bool Action\+::\+Send\+Agent\+Action\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if the agent can be sent to location 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true if the agent is on player\textquotesingle{}s deck and location still receive agent 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{Interface\+::\+Action\+Interface}}.
+
+\mbox{\Hypertarget{classAction_1_1SendAgentAction_a1d5bb8eae193c5dac94392329ba812bb}\label{classAction_1_1SendAgentAction_a1d5bb8eae193c5dac94392329ba812bb}} 
+\index{Action::SendAgentAction@{Action::SendAgentAction}!perform@{perform}}
+\index{perform@{perform}!Action::SendAgentAction@{Action::SendAgentAction}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Action\+::\+Send\+Agent\+Action\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+performs the send agent action 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+agent has been sent to the location from owner\textquotesingle{}s hand 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{Interface\+::\+Action\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sendagentaction_8h}{sendagentaction.\+h}}\item 
+sendagentaction.\+cpp\end{DoxyCompactItemize}

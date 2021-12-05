@@ -1,0 +1,48 @@
+\hypertarget{classReadData_1_1OfflineReader}{}\doxysection{Read\+Data\+::Offline\+Reader Class Reference}
+\label{classReadData_1_1OfflineReader}\index{ReadData::OfflineReader@{ReadData::OfflineReader}}
+
+
+The \mbox{\hyperlink{classReadData_1_1OfflineReader}{Offline\+Reader}} class to read files and store the data.  
+
+
+
+
+{\ttfamily \#include $<$offlinereader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structReadData_1_1OfflineData}{Offline\+Data}} $>$ \mbox{\hyperlink{classReadData_1_1OfflineReader_a3d78188912f25d8c84469787f7131ca8}{read\+File\+To\+Data}} (const QString \&location\+File, const QString \&agent\+Counciler\+File, const QString \&influence\+File, const QString \&init\+Agent\+File)
+\begin{DoxyCompactList}\small\item\em read\+File\+To\+Data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classReadData_1_1OfflineReader}{Offline\+Reader}} class to read files and store the data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReadData_1_1OfflineReader_a3d78188912f25d8c84469787f7131ca8}\label{classReadData_1_1OfflineReader_a3d78188912f25d8c84469787f7131ca8}} 
+\index{ReadData::OfflineReader@{ReadData::OfflineReader}!readFileToData@{readFileToData}}
+\index{readFileToData@{readFileToData}!ReadData::OfflineReader@{ReadData::OfflineReader}}
+\doxysubsubsection{\texorpdfstring{readFileToData()}{readFileToData()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structReadData_1_1OfflineData}{Offline\+Data}} $>$ Read\+Data\+::\+Offline\+Reader\+::read\+File\+To\+Data (\begin{DoxyParamCaption}\item[{const QString \&}]{location\+File,  }\item[{const QString \&}]{agent\+Counciler\+File,  }\item[{const QString \&}]{influence\+File,  }\item[{const QString \&}]{init\+Agent\+File }\end{DoxyParamCaption})}
+
+
+
+read\+File\+To\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location\+File,JSON} & file \\
+\hline
+{\em card\+File,JSON} & file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+share pointer to all struct Offline data, nullptr if file cannot read 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{offlinereader_8h}{offlinereader.\+h}}\item 
+offlinereader.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\hypertarget{classCardItem}{}\doxysection{Card\+Item Class Reference}
+\label{classCardItem}\index{CardItem@{CardItem}}
+
+
+The \mbox{\hyperlink{classCardItem}{Card\+Item}} class implement a graphic object to represent a card.  
+
+
+
+
+{\ttfamily \#include $<$carditem.\+h$>$}
+
+Inheritance diagram for Card\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCardItem}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCardItem_ab039ce18636a12c5d24561fdc82f7f0f}{Card\+Item}} (QString name, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ card, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Interface\+::\+Game}} $>$ game, QString description=\char`\"{}\char`\"{}, QString img=\char`\"{}\char`\"{}, QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classCardItem}{Card\+Item}} Constructor. \end{DoxyCompactList}\item 
+QRectF \mbox{\hyperlink{classCardItem_ae6e82cb724cfa2f342ee50326ed92f2c}{bounding\+Rect}} () const override
+\begin{DoxyCompactList}\small\item\em bounding\+Rect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardItem_a180ebb36fd13715c206ac51ff9ac6248}{paint}} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget=nullptr) override
+\begin{DoxyCompactList}\small\item\em paint, paint function to render the card \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCardItem_a7d2341afcecc1dec8cf5bfe58f924919}{set\+Backgroud}} (QString img)
+\begin{DoxyCompactList}\small\item\em set\+Backgroud, set card\textquotesingle{}s background \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ \mbox{\hyperlink{classCardItem_a25b9a7fc1a81e13fbe8555e2195d305b}{get\+Card}} ()
+\begin{DoxyCompactList}\small\item\em get\+Card \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCardItem_a2f610872d75d1cb5952aca0082d8c217}\label{classCardItem_a2f610872d75d1cb5952aca0082d8c217}} 
+void {\bfseries hover\+Enter\+Event} (QGraphics\+Scene\+Hover\+Event $\ast$event) override
+\item 
+\mbox{\Hypertarget{classCardItem_aa75cbb683013ed417b7936f66998b154}\label{classCardItem_aa75cbb683013ed417b7936f66998b154}} 
+void {\bfseries hover\+Leave\+Event} (QGraphics\+Scene\+Hover\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCardItem}{Card\+Item}} class implement a graphic object to represent a card. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCardItem_ab039ce18636a12c5d24561fdc82f7f0f}\label{classCardItem_ab039ce18636a12c5d24561fdc82f7f0f}} 
+\index{CardItem@{CardItem}!CardItem@{CardItem}}
+\index{CardItem@{CardItem}!CardItem@{CardItem}}
+\doxysubsubsection{\texorpdfstring{CardItem()}{CardItem()}}
+{\footnotesize\ttfamily Card\+Item\+::\+Card\+Item (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$}]{card,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Game}{Interface\+::\+Game}} $>$}]{game,  }\item[{QString}]{description = {\ttfamily \char`\"{}\char`\"{}},  }\item[{QString}]{img = {\ttfamily \char`\"{}\char`\"{}},  }\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classCardItem}{Card\+Item}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name,card} & name \\
+\hline
+{\em card,weak} & pointer to card interface \\
+\hline
+{\em description,description} & of the card \\
+\hline
+{\em img,path} & of the card\textquotesingle{}s background image \\
+\hline
+{\em parent,parent} & object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCardItem_ae6e82cb724cfa2f342ee50326ed92f2c}\label{classCardItem_ae6e82cb724cfa2f342ee50326ed92f2c}} 
+\index{CardItem@{CardItem}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!CardItem@{CardItem}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily QRectF Card\+Item\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+bounding\+Rect 
+
+\begin{DoxyReturn}{Returns}
+a bounding Rectangle object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCardItem_a25b9a7fc1a81e13fbe8555e2195d305b}\label{classCardItem_a25b9a7fc1a81e13fbe8555e2195d305b}} 
+\index{CardItem@{CardItem}!getCard@{getCard}}
+\index{getCard@{getCard}!CardItem@{CardItem}}
+\doxysubsubsection{\texorpdfstring{getCard()}{getCard()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1CardInterface}{Interface\+::\+Card\+Interface}} $>$ Card\+Item\+::get\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Card 
+
+\begin{DoxyReturn}{Returns}
+share pointer to the card 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCardItem_a180ebb36fd13715c206ac51ff9ac6248}\label{classCardItem_a180ebb36fd13715c206ac51ff9ac6248}} 
+\index{CardItem@{CardItem}!paint@{paint}}
+\index{paint@{paint}!CardItem@{CardItem}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Card\+Item\+::paint (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QStyle\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{QWidget $\ast$}]{widget = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+paint, paint function to render the card 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter,QPainter} & object \\
+\hline
+{\em option} & \\
+\hline
+{\em widget} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCardItem_a7d2341afcecc1dec8cf5bfe58f924919}\label{classCardItem_a7d2341afcecc1dec8cf5bfe58f924919}} 
+\index{CardItem@{CardItem}!setBackgroud@{setBackgroud}}
+\index{setBackgroud@{setBackgroud}!CardItem@{CardItem}}
+\doxysubsubsection{\texorpdfstring{setBackgroud()}{setBackgroud()}}
+{\footnotesize\ttfamily void Card\+Item\+::set\+Backgroud (\begin{DoxyParamCaption}\item[{QString}]{img }\end{DoxyParamCaption})}
+
+
+
+set\+Backgroud, set card\textquotesingle{}s background 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img,path} & to the image \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{carditem_8h}{carditem.\+h}}\item 
+carditem.\+cpp\end{DoxyCompactItemize}

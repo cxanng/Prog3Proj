@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>offlinedata/agentCouncilorCard.json</file>
+        <file>offlinedata/influenceCard.json</file>
+        <file>offlinedata/location.json</file>
+        <file>offlinedata/initAgent.json</file>
+    </qresource>
+</RCC>

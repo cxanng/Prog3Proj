@@ -1,0 +1,3 @@
+[submodule "course"]
+	path = course
+	url = git@course-gitlab.tuni.fi:tie-0240x-ohjelmointi-3-programming-3_independent_2021/course.git

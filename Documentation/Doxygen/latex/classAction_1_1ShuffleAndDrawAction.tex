@@ -1,0 +1,112 @@
+\hypertarget{classAction_1_1ShuffleAndDrawAction}{}\doxysection{Action\+::Shuffle\+And\+Draw\+Action Class Reference}
+\label{classAction_1_1ShuffleAndDrawAction}\index{Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}}
+
+
+action shuffles and draws a card from location\textquotesingle{}s deck to player\textquotesingle{}s hand  
+
+
+
+
+{\ttfamily \#include $<$shuffleanddrawaction.\+h$>$}
+
+Inheritance diagram for Action\+::Shuffle\+And\+Draw\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAction_1_1ShuffleAndDrawAction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a42523c380567001d8de7ef95eef278f3}{Shuffle\+And\+Draw\+Action}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$ player, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$ target\+Loc)
+\begin{DoxyCompactList}\small\item\em Suffle\+And\+Draw\+Action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAction_1_1ShuffleAndDrawAction_a913efb811dfd65d99dfee4110b6c25d7}\label{classAction_1_1ShuffleAndDrawAction_a913efb811dfd65d99dfee4110b6c25d7}} 
+virtual \mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a913efb811dfd65d99dfee4110b6c25d7}{$\sim$\+Shuffle\+And\+Draw\+Action}} ()=default
+\begin{DoxyCompactList}\small\item\em default virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a20a6482effdec98e73e3b3224a7b8c6f}{can\+Perform}} () const
+\begin{DoxyCompactList}\small\item\em check if the draw action can be performed \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAction_1_1ShuffleAndDrawAction_a6153113509685c440e7cc4b2d4382fc5}{perform}} ()
+\begin{DoxyCompactList}\small\item\em performs the suffle and draw action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+action shuffles and draws a card from location\textquotesingle{}s deck to player\textquotesingle{}s hand 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAction_1_1ShuffleAndDrawAction_a42523c380567001d8de7ef95eef278f3}\label{classAction_1_1ShuffleAndDrawAction_a42523c380567001d8de7ef95eef278f3}} 
+\index{Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}!ShuffleAndDrawAction@{ShuffleAndDrawAction}}
+\index{ShuffleAndDrawAction@{ShuffleAndDrawAction}!Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}}
+\doxysubsubsection{\texorpdfstring{ShuffleAndDrawAction()}{ShuffleAndDrawAction()}}
+{\footnotesize\ttfamily Action\+::\+Shuffle\+And\+Draw\+Action\+::\+Shuffle\+And\+Draw\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Player}{Interface\+::\+Player}} $>$}]{player,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInterface_1_1Location}{Interface\+::\+Location}} $>$}]{target\+Loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Suffle\+And\+Draw\+Action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent,shared\+\_\+ptr} & to the agent \\
+\hline
+{\em target\+Loc,shared\+\_\+ptr} & to the target location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Shuffle action created 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAction_1_1ShuffleAndDrawAction_a20a6482effdec98e73e3b3224a7b8c6f}\label{classAction_1_1ShuffleAndDrawAction_a20a6482effdec98e73e3b3224a7b8c6f}} 
+\index{Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}!canPerform@{canPerform}}
+\index{canPerform@{canPerform}!Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}}
+\doxysubsubsection{\texorpdfstring{canPerform()}{canPerform()}}
+{\footnotesize\ttfamily bool Action\+::\+Shuffle\+And\+Draw\+Action\+::can\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if the draw action can be performed 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true if the player has any agent at location and the deck at that location can be drawed 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a84c039fee89dc7becb9b716a581989ce}{Interface\+::\+Action\+Interface}}.
+
+\mbox{\Hypertarget{classAction_1_1ShuffleAndDrawAction_a6153113509685c440e7cc4b2d4382fc5}\label{classAction_1_1ShuffleAndDrawAction_a6153113509685c440e7cc4b2d4382fc5}} 
+\index{Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}!perform@{perform}}
+\index{perform@{perform}!Action::ShuffleAndDrawAction@{Action::ShuffleAndDrawAction}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Action\+::\+Shuffle\+And\+Draw\+Action\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+performs the suffle and draw action 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a card from location deck has be drawed to player\textquotesingle{}s hand 
+
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{classInterface_1_1ActionInterface_a8ca0dc2654b4bedabb1cf05d8aa82c63}{Interface\+::\+Action\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shuffleanddrawaction_8h}{shuffleanddrawaction.\+h}}\item 
+shuffleanddrawaction.\+cpp\end{DoxyCompactItemize}
